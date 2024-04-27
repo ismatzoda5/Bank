@@ -20,6 +20,7 @@ const Layout = () => {
   // };
   return (
     <div>
+
       <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center">
         <div className="w-[100%] h-[100%]">
           {/* <img className="w-[100%] h-[100%]" src={logo} alt="" /> */}
@@ -61,6 +62,7 @@ const Layout = () => {
           </div>
         </div>
       </div>
+
       <Outlet />
     </div>
   );
