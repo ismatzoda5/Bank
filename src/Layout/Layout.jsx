@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import Switcher from "../components/Swicher";
 
 // imports of Assets Image
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 
 // imports of select mui
 import Box from "@mui/material/Box";
@@ -22,7 +22,7 @@ const Layout = () => {
     <div>
       <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center">
         <div className="w-[100%] h-[100%]">
-          <img className="w-[100%] h-[100%]" src={logo} alt="" />
+          {/* <img className="w-[100%] h-[100%]" src={logo} alt="" /> */}
         </div>
         <div className="flex items-center gap-[30px]">
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">
