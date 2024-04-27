@@ -2,7 +2,7 @@ import React from 'react'
 
 const Denezhnie_perevodi = () => {
   return (
-    <div>Denezhnie_perevodi</div>
+    <div>Denezhnie</div>
   )
 }
 
