@@ -6,7 +6,7 @@ const Layout = () => {
     <div>
       <ul className="flex gap-10 justify-center">
         <li>
-          <Link to={"/"}> Home</Link>
+          <Link to={"/"}>oo</Link>
         </li>
       </ul>
       <Outlet />
