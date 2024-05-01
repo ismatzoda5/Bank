@@ -13,42 +13,141 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@mui/material";
 import { color } from "framer-motion";
-// imports of popover in ant design 
+// imports of popover in ant design
 import { Button, ConfigProvider, Popover } from "antd";
-const text = <span>Title</span>;
+import { useState } from "react";
 const content = (
-  <div>
-    <p>Content</p>
-    <p>Content</p>
+  <div className="w-[200px]">
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Кредиты
+    </h1>
+    <Link to={"deposity"}>
+      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Депозиты
+      </h1>
+    </Link>
+    <Link to={"strakhoviklady"}>
+      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Страховые вклады
+      </h1>
+    </Link>
+    <Link to={"denezhnieperevody"}>
+      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Денежные переводы
+      </h1>
+    </Link>
+    <Link to={"bankovskiekarty"}>
+      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Банковские карты
+      </h1>
+    </Link>
+    <Link to={"projects"}>
+      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Проекты
+      </h1>
+    </Link>
   </div>
 );
-const buttonWidth = 80;
-
+const content2 = (
+  <div className="w-[200px]">
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Зарплатные проекты
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      РКО
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Бизнес проекты
+    </h1>
+  </div>
+);
+const content3 = (
+  <div className="w-[200px]">
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Фудиторские отчеты
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Права клиента
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Норматив достаточности капитала
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Инвесторам
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Комплаенс
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Финансовые отчеты
+    </h1>
+    <Link to={"rukovodstva"}>
+      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Руководство
+      </h1>
+    </Link>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      История
+    </h1>
+  </div>
+);
+const content4 = (
+  <div className="w-[200px]">
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Акция
+    </h1>
+  </div>
+);
+const content5 = (
+  <div className="w-[200px]">
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Головной офис
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      Филлиалы
+    </h1>
+    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      ЦБО
+    </h1>
+  </div>
+);
 const Layout = () => {
+  const [modal, setModal] = useState(false);
   return (
     <div>
-      <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] font-[500] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center sx:p-[10px]">
-        <div className="w-[16%] h-[100%]">
+      <div className="pl-[80px]  dark:bg-gray-900 bg:text-[white] font-[500] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
+        <div className="w-[16%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
           <img className="w-[100%] h-[100%]" src={logo} alt="" />
         </div>
-        <div className="flex items-center gap-[30px] sx:hidden">
-          <Popover placement="bottom" title={text} content={content}>
-            <Button>
-              <h1 className="chastnie-lica hover:text-[white] cursor-pointer p-[5px]">
-                Частным лицам
-              </h1>
-            </Button>
+        <div className="flex items-center gap-[30px] sx:hidden l:hidden xl:hidden xxl:hidden cs:hidden cx:hidden">
+          <Popover className="border-none" placement="bottom" content={content}>
+            <h1 className="chastnie-lica  text-[#EBA707] hover:text-[white] cursor-pointer p-[5px]">
+              Частным лицам
+            </h1>
           </Popover>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">Бизнесу</h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
-            О компании
-          </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">Новости</h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
-            Контакты
-          </h1>
+          <Popover placement="bottom" content={content2}>
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Бизнесу
+            </h1>
+          </Popover>
+          <Popover content={content3} placement="bottom">
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              О компании
+            </h1>
+          </Popover>
+          <Popover content={content4} placement="bottom">
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Новости
+            </h1>
+          </Popover>
+          <Popover content={content5} placement="bottom">
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Контакты
+            </h1>
+          </Popover>
         </div>
         <div className="flex items-center gap-[30px] justify-between">
           <select
@@ -67,16 +166,18 @@ const Layout = () => {
             </option>
           </select>
           <Switcher />
-          <IconButton className="hidden">
-            <MenuIcon
-              sx={{ width: "30px", height: "30px", color: "#EBA707" }}
-            />
-          </IconButton>
+          <div className="hidden sx:block l:block xl:block xxl:block cs:block cx:block">
+            <IconButton onClick={() => setModal(true)}>
+              <MenuIcon
+                sx={{ width: "30px", height: "30px", color: "#EBA707" }}
+              />
+            </IconButton>
+          </div>
         </div>
       </div>
       <Outlet />
-      <div className="p-[80px] flex justify-between items-center bg-[#0C0C0C] dark:bg-gray-900 text-[#EBA707] text-[18px] font-[500] ">
-        <div className="w-[35%] h-[100%]">
+      <div className="p-[80px] flex justify-between items-center bg-[#0C0C0C] dark:bg-gray-900 text-[#EBA707] text-[18px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
+        <div className="w-[35%] h-[100%] sx:w-[100%] l:w-[100%] xl:w-[100%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <img className="w-[50%] h-[100%]" src={logo} alt="" />
           <h1 className="font-[500] mt-[40px] hover:text-[white]">
             ЗАО МДО «Сандук» выступает в качестве правопреемника ООО МДО «Рушди
@@ -86,7 +187,7 @@ const Layout = () => {
             22.01.2022 год был преобразован в ЗАО МДО «Сандук».
           </h1>
         </div>
-        <div className="w-[20%]">
+        <div className="w-[20%] sx:w-[48%] l:w-[48%] xl:w-[48%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <h1 className="hover:text-[white] cursor-pointer p-[5px] text-[25px] font-[500]">
             О компании
           </h1>
@@ -108,34 +209,40 @@ const Layout = () => {
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">
             Финансовые отчеты
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
-            Руководство
-          </h1>
+          <Link to={"rukovodstva"}>
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Руководство
+            </h1>
+          </Link>
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">История</h1>
         </div>
-        <div className="w-[20%]">
+        <div className="w-[20%] sx:w-[48%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:w-[48%] xxl:mt-[20px] cs:mt-[20px] cs:w-[48%] cx:w-[48%]">
           <h1 className="hover:text-[white] cursor-pointer p-[5px] text-[25px] font-[500]">
             Малому и среднему Бизнесу
           </h1>
           <h1 className="hover:text-[white] cursor-pointer  p-[5px] pt-[20px]">
             Зарплатные проекты
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
-            Банковскые карты
-          </h1>
+          <Link to={"bankovskiekarty"}>
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Банковскые карты
+            </h1>
+          </Link>
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">Кредиты</h1>
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">
             Паевые инвестиционные фонды
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
-            Депозиты
-          </h1>
+          <Link to={"deposity"}>
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Депозиты
+            </h1>
+          </Link>
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">РКО</h1>
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">
             Бизнес-проекты
           </h1>
         </div>
-        <div className="w-[15%]">
+        <div className="w-[15%] sx:w-[100%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:mt-[20px] xxl:w-[48%] cs:w-[48%] cs:mt-[20px] cx:w-[48%]">
           <h1 className="hover:text-[white] cursor-pointer p-[5px] text-[25px] font-[500]">
             Контакты
           </h1>
@@ -151,18 +258,18 @@ const Layout = () => {
             <LocalPhoneIcon sx={{ cursor: "pointer" }} />
             <h1 className=" cursor-pointer ">(+992)44 600 15 20</h1>
           </div>
-          <div className="flex justify-around  mt-[10px]">
-            <div className="border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+          <div className="flex justify-around  mt-[10px] sx:justify-start sx:gap-[20px]">
+            <div className="socsety border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
               <TelegramIcon
                 sx={{ width: "30px", height: "30px", cursor: "pointer" }}
               />
             </div>
-            <div className="border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+            <div className="socsety border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
               <InstagramIcon
                 sx={{ width: "30px", height: "30px", cursor: "pointer" }}
               />
             </div>
-            <div className="border-[1.5px] hover:text-[white]  hover:border-[white]  cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+            <div className="socsety border-[1.5px] hover:text-[white]  hover:border-[white]  cursor-pointer p-[5px] rounded-md border-[#EBA707]">
               <FacebookIcon
                 sx={{ width: "30px", height: "30px", cursor: "pointer" }}
               />
@@ -170,25 +277,16 @@ const Layout = () => {
           </div>
         </div>
       </div>
-      <div className="modal1">
-        <h1>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
-          aliquam consequuntur. At, ipsam sequi cupiditate eveniet obcaecati aut
-          consequatur odit vel eius reprehenderit, reiciendis, tenetur eos illo
-          sit exercitationem quisquam!
-        </h1>
-      </div>
-      <ConfigProvider
-        button={{
-          style: {
-            width: buttonWidth,
-            margin: 4,
-          },
-        }}
-      >
-              </ConfigProvider>
+      {modal ? (
+        <div className="absolute top-1 text-white w-[100%] h-[300px] bg-[white] p-[30px]">
+          <div>
+            <IconButton onClick={() => setModal(false)}>
+              <CloseIcon sx={{ width: "30px", height: "30px" }} />
+            </IconButton>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };
-
 export default Layout;

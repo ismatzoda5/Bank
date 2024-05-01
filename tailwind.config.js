@@ -15,7 +15,7 @@ export default {
       xl: { max: '700px' },
       xxl:{ max: "800px" },
       cs: { max: "900px" },
-      cx: { max: "100px" }
+      cx: { max: "1000px" }
     },
   },
   plugins: [],
