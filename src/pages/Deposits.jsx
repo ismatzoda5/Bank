@@ -13,6 +13,11 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const Deposits = () => {
   return (
+
+    <div>
+      Deposits
+    </div>
+
     <>
     <div className="bg-slate-100">
        <div className="w-[90%] m-auto flex justify-between items-center">
@@ -131,6 +136,7 @@ const Deposits = () => {
      </div>
    
     </>
+
   )
 }
 

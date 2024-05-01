@@ -17,7 +17,7 @@ export default function Switcher() {
       <div>
         <DarkModeSwitch
           sunColor="orange"
-          moonColor="red"
+          moonColor="gray"
           checked={darkSide}
           onChange={toggleDarkMode}
           size={36}
