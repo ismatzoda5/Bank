@@ -34,6 +34,7 @@ const Denezhnie_perevodi = () => {
     },
   ];
   return (
+
     <div className=" dark:bg-gray-900  dark:text-white pl-[100px] pr-[100px] pt-[30px] pb-[30px]">
       <div>
         <h1 className="text-[30px] font-[600] text-[#EBA707]">Наши Международные системы переводов</h1>
@@ -82,5 +83,10 @@ const Denezhnie_perevodi = () => {
     </div>
   );
 };
+
+    <div>Denezhnie</div>
+  )
+}
+
 
 export default Denezhnie_perevodi;

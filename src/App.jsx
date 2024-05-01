@@ -2,12 +2,17 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Layout from "./Layout/Layout";
 import NotFound from "./pages/NotFound";
+
 import Rukovodstva from "./pages/rukovodstva";
 import Denezhnie_perevodi from "./pages/Denezhnie_perevodi";
 import Deposits from "./pages/Deposits";
 import StrakhovieVkladi from "./pages/StrakhovieVkladi";
 import BankovskieKarty from "./pages/BankovskieKarty";
 import Projects from "./pages/Projects";
+
+import BankCard from "./pages/BankCard";
+import Deposits from "./pages/Deposits";
+
 
 const router = createBrowserRouter([
   {
@@ -41,6 +46,14 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Projects />,
+      },
+      {
+        path: "/BankCard",
+        element: <BankCard />,
+      },
+      {
+        path: "/Deposits",
+        element: <Deposits />,
       },
       {
         path: "*",

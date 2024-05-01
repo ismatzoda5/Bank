@@ -118,6 +118,7 @@ const Layout = () => {
   const [modal, setModal] = useState(false);
   return (
     <div>
+
       <div className="pl-[80px]  dark:bg-gray-900 bg:text-[white] font-[500] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
         <div className="w-[16%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
           <img className="w-[100%] h-[100%]" src={logo} alt="" />
@@ -148,6 +149,12 @@ const Layout = () => {
               Контакты
             </h1>
           </Popover>
+
+
+      <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center">
+        <div className="w-[100%] h-[100%]">
+          {/* <img className="w-[100%] h-[100%]" src={logo} alt="" /> */}
+
         </div>
         <div className="flex items-center gap-[30px] justify-between">
           <select
@@ -277,6 +284,7 @@ const Layout = () => {
           </div>
         </div>
       </div>
+
       {modal ? (
         <div className="absolute top-1 text-white w-[100%] h-[300px] bg-[white] p-[30px]">
           <div>
@@ -286,6 +294,10 @@ const Layout = () => {
           </div>
         </div>
       ) : null}
+
+
+      <Outlet />
+
     </div>
   );
 };
