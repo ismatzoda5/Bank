@@ -12,6 +12,7 @@ import BankCard from "./pages/BankCard";
 import Deposits from "./pages/Deposits";
 import Finansovieotchety from "./pages/Finansovieotchety";
 import Istoriya from "./pages/istoriya";
+import Credits from "./pages/Credits";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "credits",
+        element:<Credits/>
       },
       {
         path: "rukovodstva",
