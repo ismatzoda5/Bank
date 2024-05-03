@@ -21,31 +21,31 @@ import { Button, ConfigProvider, Popover } from "antd";
 import { useState } from "react";
 const content = (
   <div className="w-[200px]">
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
       Кредиты
     </h1>
     <Link to={"deposity"}>
-      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
         Депозиты
       </h1>
     </Link>
     <Link to={"strakhoviklady"}>
-      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
         Страховые вклады
       </h1>
     </Link>
     <Link to={"denezhnieperevody"}>
-      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
         Денежные переводы
       </h1>
     </Link>
     <Link to={"bankovskiekarty"}>
-      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
         Банковские карты
       </h1>
     </Link>
     <Link to={"projects"}>
-      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
         Проекты
       </h1>
     </Link>
@@ -53,63 +53,69 @@ const content = (
 );
 const content2 = (
   <div className="w-[200px]">
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Зарплатные проекты
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       РКО
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Бизнес проекты
     </h1>
   </div>
 );
 const content3 = (
   <div className="w-[200px]">
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Фудиторские отчеты
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-      Права клиента
-    </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <Link to={"pravaklienta"}>
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Права клиента
+      </h1>
+    </Link>
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Норматив достаточности капитала
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Инвесторам
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Комплаенс
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-      Финансовые отчеты
-    </h1>
+    <Link to={"finansovieotchety"}>
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        Финансовые отчеты
+      </h1>
+    </Link>
     <Link to={"rukovodstva"}>
-      <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
         Руководство
       </h1>
     </Link>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-      История
-    </h1>
+    <Link to={"istoriya"}>
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+        История
+      </h1>
+    </Link>
   </div>
 );
 const content4 = (
   <div className="w-[200px]">
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Акция
     </h1>
   </div>
 );
 const content5 = (
   <div className="w-[200px]">
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Головной офис
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       Филлиалы
     </h1>
-    <h1 className="chastnie-lica text-[20px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
       ЦБО
     </h1>
   </div>
@@ -118,10 +124,11 @@ const Layout = () => {
   const [modal, setModal] = useState(false);
   return (
     <div>
-
-      <div className="pl-[80px]  dark:bg-gray-900 bg:text-[white] font-[500] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
+      <div className="pl-[80px] sticky top-0  dark:bg-gray-900 bg:text-[white] font-[500] text-[18px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center z-10 sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
         <div className="w-[16%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
-          <img className="w-[100%] h-[100%]" src={logo} alt="" />
+          <Link to={"/"}>
+            <img className="w-[100%] h-[100%]" src={logo} alt="" />
+          </Link>
         </div>
         <div className="flex items-center gap-[30px] sx:hidden l:hidden xl:hidden xxl:hidden cs:hidden cx:hidden">
           <Popover className="border-none" placement="bottom" content={content}>
@@ -150,40 +157,37 @@ const Layout = () => {
             </h1>
           </Popover>
 
-
-      <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[20px] pb-[20px] flex justify-between items-center">
-        <div className="w-[100%] h-[100%]">
-          {/* <img className="w-[100%] h-[100%]" src={logo} alt="" /> */}
-
-        </div>
-        <div className="flex items-center gap-[30px] justify-between">
-          <select
-            className="w-[80px] bg-[#0C0C0C] rounded-md dark:bg-gray-900 p-[5px] h-[40px] outline-none cursor-pointer"
-            name=""
-            id=""
-          >
-            <option value="">
-              <h1>TJK</h1>
-            </option>
-            <option value="">
-              <h1>RUS</h1>
-            </option>
-            <option value="">
-              <h1>ENG</h1>
-            </option>
-          </select>
-          <Switcher />
-          <div className="hidden sx:block l:block xl:block xxl:block cs:block cx:block">
-            <IconButton onClick={() => setModal(true)}>
-              <MenuIcon
-                sx={{ width: "30px", height: "30px", color: "#EBA707" }}
-              />
-            </IconButton>
+          <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center ">
+            <div className="flex items-center gap-[30px] justify-between">
+              <select
+                className="w-[80px] bg-[#0C0C0C] rounded-md dark:bg-gray-900 p-[5px] h-[40px] outline-none cursor-pointer"
+                name=""
+                id=""
+              >
+                <option value="">
+                  <h1>TJK</h1>
+                </option>
+                <option value="">
+                  <h1>RUS</h1>
+                </option>
+                <option value="">
+                  <h1>ENG</h1>
+                </option>
+              </select>
+              <Switcher />
+              <div className="hidden sx:block ">
+                <IconButton>
+                  <MenuIcon
+                    sx={{ width: "30px", height: "30px", color: "#EBA707" }}
+                  />
+                </IconButton>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <Outlet />
-      <div className="p-[80px] flex justify-between items-center bg-[#0C0C0C] dark:bg-gray-900 text-[#EBA707] text-[18px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
+      <div className="p-[30px] flex justify-between items-center bg-[#0C0C0C] dark:bg-gray-900 text-[#EBA707] text-[16px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
         <div className="w-[35%] h-[100%] sx:w-[100%] l:w-[100%] xl:w-[100%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <img className="w-[50%] h-[100%]" src={logo} alt="" />
           <h1 className="font-[500] mt-[40px] hover:text-[white]">
@@ -195,15 +199,17 @@ const Layout = () => {
           </h1>
         </div>
         <div className="w-[20%] sx:w-[48%] l:w-[48%] xl:w-[48%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
-          <h1 className="hover:text-[white] cursor-pointer p-[5px] text-[25px] font-[500]">
+          <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
             О компании
           </h1>
           <h1 className="hover:text-[white] cursor-pointer  p-[5px] pt-[20px]">
             Аудиторские отчёты
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
-            Права клиента
-          </h1>
+          <Link to={"pravaklienta"}>
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Права клиента
+            </h1>
+          </Link>
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">
             Норматив достаточности капитала
           </h1>
@@ -213,18 +219,24 @@ const Layout = () => {
           <h1 className="hover:text-[white] cursor-pointer p-[5px]">
             Комплаенсы
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
-            Финансовые отчеты
-          </h1>
+          <Link to={"finansovieotchety"}>
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              Финансовые отчеты
+            </h1>
+          </Link>
           <Link to={"rukovodstva"}>
             <h1 className="hover:text-[white] cursor-pointer p-[5px]">
               Руководство
             </h1>
           </Link>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">История</h1>
+          <Link to={"istoriya"}>
+            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+              История
+            </h1>
+          </Link>
         </div>
         <div className="w-[20%] sx:w-[48%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:w-[48%] xxl:mt-[20px] cs:mt-[20px] cs:w-[48%] cx:w-[48%]">
-          <h1 className="hover:text-[white] cursor-pointer p-[5px] text-[25px] font-[500]">
+          <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
             Малому и среднему Бизнесу
           </h1>
           <h1 className="hover:text-[white] cursor-pointer  p-[5px] pt-[20px]">
@@ -250,7 +262,7 @@ const Layout = () => {
           </h1>
         </div>
         <div className="w-[15%] sx:w-[100%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:mt-[20px] xxl:w-[48%] cs:w-[48%] cs:mt-[20px] cx:w-[48%]">
-          <h1 className="hover:text-[white] cursor-pointer p-[5px] text-[25px] font-[500]">
+          <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
             Контакты
           </h1>
           <div className="footer-div-info flex items-center gap-[20px] p-[10px] mt-[10px]">
@@ -267,24 +279,27 @@ const Layout = () => {
           </div>
           <div className="flex justify-around  mt-[10px] sx:justify-start sx:gap-[20px]">
             <div className="socsety border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
-              <TelegramIcon
+              <EmailIcon
                 sx={{ width: "30px", height: "30px", cursor: "pointer" }}
               />
             </div>
-            <div className="socsety border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
-              <InstagramIcon
-                sx={{ width: "30px", height: "30px", cursor: "pointer" }}
-              />
-            </div>
-            <div className="socsety border-[1.5px] hover:text-[white]  hover:border-[white]  cursor-pointer p-[5px] rounded-md border-[#EBA707]">
-              <FacebookIcon
-                sx={{ width: "30px", height: "30px", cursor: "pointer" }}
-              />
-            </div>
+            <a target="blank" href="https://www.instagram.com/sanduktj">
+              <div className="socsety border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+                <InstagramIcon
+                  sx={{ width: "30px", height: "30px", cursor: "pointer" }}
+                />
+              </div>
+            </a>
+            <a target="blank" href="https://www.facebook.com/sanduk.tj">
+              <div className="socsety border-[1.5px] hover:text-[white]  hover:border-[white]  cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+                <FacebookIcon
+                  sx={{ width: "30px", height: "30px", cursor: "pointer" }}
+                />
+              </div>
+            </a>
           </div>
         </div>
       </div>
-
       {modal ? (
         <div className="absolute top-1 text-white w-[100%] h-[300px] bg-[white] p-[30px]">
           <div>
@@ -294,10 +309,6 @@ const Layout = () => {
           </div>
         </div>
       ) : null}
-
-
-      <Outlet />
-
     </div>
   );
 };

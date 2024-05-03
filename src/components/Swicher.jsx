@@ -16,11 +16,11 @@ export default function Switcher() {
     <>
       <div>
         <DarkModeSwitch
-          sunColor="orange"
+          sunColor="#EBA707"
           moonColor="gray"
           checked={darkSide}
           onChange={toggleDarkMode}
-          size={36}
+          size={30}
         />
       </div>
     </>
