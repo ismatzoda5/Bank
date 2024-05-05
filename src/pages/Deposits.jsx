@@ -13,65 +13,65 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 const Deposits = () => {
   return (
     <>
-      <div className="bg-slate-100">
-        <div className=" flex justify-between items-center pt-[40px] pb-[40px] pl-[100px] pr-[100px] sx:p-[10px] sx:flex-wrap">
-          <div className="w-[55%] text-gray-800 sx:w-[100%]">
-            <h1 className="text-[50px] font-[600] sx:text-[30px]">
+      <div className="bg-slate-100 dark:bg-gray-800 dark:text-white ">
+        <div className=" flex justify-between items-center pt-[40px] pb-[40px] pl-[100px] pr-[100px] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:flex-wrap xl:p-[30px] xxl:p-[40px] xxl:flex-wrap cs:p-[20px] cx:p-[20px]">
+          <div className="w-[55%] text-gray-800 sx:w-[100%] l:w-[100%] xl:w-[100%] xxl:w-[100%]">
+            <h1 className="text-[50px] font-[600] sx:text-[30px] dark:text-[white]">
               Выберите свой способ получить доход
             </h1>
-            <p className="text-[18px] font-[500] mt-[3%] sx:text-[16px]">
+            <p className="text-[18px] font-[500] mt-[3%] sx:text-[16px] dark:text-[white]">
               Откройте вклад или накопительный счет, получайте доход, накопите
               на квартиру, отпуск, учебу и другие масштабные цели
             </p>
-            <button className="bg-gray-900  dark:bg-gray-800 dark:text-[#fcd450] dark:border-[2px] dark:border-[#fcd450] text-[white] w-[30%] mb-[5%] rounded-[10px] mt-[4%] h-[8.5vh] sx:h-[13vh] sx:w-[40%] text-[16px] font-[500]">
+            <button className="bg-gray-900 hover:line-through  dark:bg-gray-800 dark:text-[#fcd450] dark:border-[2px] dark:border-[#fcd450] text-[white] w-[30%] mb-[5%] rounded-[10px] mt-[4%] h-[8.5vh] sx:h-[10vh] sx:w-[50%] ph:w-[80%] cs:w-[50%] cx:w-[50%] text-[16px] font-[500]">
               Оформить депозит
             </button>
           </div>
-          <div className="w-[50%] sx:w-[100%]">
+          <div className="w-[50%] sx:w-[100%] l:w-[100%] xl:w-[100%] xxl:w-[100%]">
             <img className="w-[100%] h-[100%]" src={deposit1} alt="" />
           </div>
         </div>
       </div>
-      <div className="pl-[100px] pr-[100px] dark:text-[white] dark:bg-gray-800 m-auto text-center text-gray-900 sx:w-[80%] sx:m-[auto]">
-        <h1 className="text-[45px] font-[600] sx:text-[30px]">
+      <div className="pl-[100px] pr-[100px] dark:text-[white] dark:bg-gray-800  text-center text-gray-900 sx:p-[10px] l:p-[10px]">
+        <h1 className="text-[45px] font-[600] sx:text-[30px] l:text-[35px] xl:text-[35px] xxl:p-[10px]">
           Открыть вклад легко
         </h1>
       </div>
-      <div className=" flex justify-between p-[100px] sx:p-[10px] sx:flex-wrap dark:bg-gray-800">
-        <div className="div-deposit bg-slate-100 w-[30%] rounded-md sx:w-[70%] sx:m-[auto] sx:mt-[40px] dark:text-[white]">
-          <h1 className="w-[15%] h-[8vh] rounded-[10px] font-serif  text-center pt-[7px] bg-slate-400 text-[white] dark:text-[white] text-[30px] font-[800] ml-[41%] mt-[-6%] sx:h-[15vh] sx:w-[18%]">
+      <div className=" flex justify-between p-[100px] sx:p-[10px] sx:flex-wrap ph:p-[10px] ph:flex-wrap dark:bg-gray-800 l:p-[10px] l:flex-wrap xl:flex-wrap xl:p-[50px] xxl:p-[50px] xxl:flex-wrap cs:p-[20px] cx:p-[30px]">
+        <div className="div-deposit bg-slate-100 w-[30%] rounded-md sx:w-[70%] sx:m-[auto] ph:w-[70%] l:mt-[50px] ph:m-[auto] l:w-[70%] l:m-[auto] sx:mt-[40px] xl:w-[70%] xl:m-[auto] xl:mt-[40px] xxl:w-[50%] xxl:m-[auto] xxl:mt-[40px] dark:text-[white] dark:bg-gray-900">
+          <h1 className="w-[15%] h-[8vh] rounded-[10px] font-serif  text-center pt-[7px] bg-slate-400 text-[white] dark:text-[white] text-[30px] font-[800] ml-[41%] mt-[-6%] sx:h-[10vh] sx:w-[18%]">
             1
           </h1>
-          <p className="text-center w-[80%] m-auto text-[18px]  font-[400] mt-[5%] mb-[7%] text-slate-700">
+          <p className="text-center w-[80%] m-auto text-[18px]  font-[400] mt-[5%] mb-[7%] text-slate-700 dark:text-white">
             Заполните онлайн-заявку — посещать банк не нужно
           </p>
         </div>
-        <div className="div-deposit bg-slate-100 w-[30%] rounded-md sx:w-[70%] sx:m-[auto] sx:mt-[40px]">
-          <h1 className="w-[15%] h-[8vh] rounded-[10px] font-serif pt-[7px]  text-center bg-slate-400 text-[white] text-[30px] font-[800] ml-[41%] mt-[-6%] sx:h-[15vh] sx:w-[18%]">
+        <div className="div-deposit bg-slate-100 w-[30%] rounded-md sx:w-[70%] sx:m-[auto] l:w-[70%] l:m-[auto] l:mt-[50px] xl:w-[70%] xl:m-[auto] xl:mt-[40px] xxl:w-[48%] xxl:m-[auto] xxl:mt-[40px]  sx:mt-[40px] dark:bg-gray-900 dark:text-[white]">
+          <h1 className="w-[15%] h-[8vh] rounded-[10px] font-serif pt-[7px]  text-center bg-slate-400 text-[white] text-[30px] font-[800] ml-[41%] mt-[-6%] sx:h-[10vh] sx:w-[18%]">
             2
           </h1>
-          <p className="text-center w-[80%] m-auto text-[18px] font-[400] mt-[5%] mb-[7%] text-slate-700">
+          <p className="text-center w-[80%] m-auto text-[18px] font-[400] mt-[5%] mb-[7%] text-slate-700 dark:text-white">
             Если у вас нет карты Сандук, доставим договор и карту в удобное
             время
           </p>
         </div>
-        <div className="div-deposit bg-slate-100 w-[30%] rounded-md sx:w-[70%] sx:m-[auto] sx:mt-[40px] sx:p-[0px] ">
-          <h1 className="w-[15%] h-[8vh] rounded-[10px] font-serif pt-[7px]  text-center bg-slate-400 text-[white] text-[30px] font-[800] ml-[41%] mt-[-6%] sx:h-[15vh] sx:w-[18%]">
+        <div className="div-deposit bg-slate-100 w-[30%] rounded-md sx:w-[70%] sx:m-[auto] l:w-[70%] l:m-[auto] l:mt-[50px] sx:mt-[40px] sx:p-[0px] xl:w-[70%] xl:m-[auto] xl:mt-[40px] xxl:w-[48%] xxl:m-[auto] xxl:mt-[40px] dark:bg-gray-900">
+          <h1 className="w-[15%] h-[8vh] rounded-[10px] font-serif pt-[7px]  text-center bg-slate-400 text-[white] text-[30px] font-[800] ml-[41%] mt-[-6%] sx:h-[10vh] sx:w-[18%]">
             3
           </h1>
-          <p className="text-center w-[80%] m-auto text-[18px] font-[400] mt-[5%] mb-[7%] text-slate-700">
+          <p className="text-center w-[80%] m-auto text-[18px] font-[400] mt-[5%] mb-[7%] text-slate-700 dark:text-white">
             Пополните вклад онлайн или наличными без комиссии 24/7
           </p>
         </div>
       </div>
 
-      <div className="pl-[100px] pr-[100px]  dark:bg-gray-800  pt-[30px] pb-[30px] dark:text-white m-auto text-center text-gray-900 sx:w-[80%]">
+      <div className="pl-[100px] pr-[100px]  dark:bg-gray-800  pt-[30px] pb-[30px] dark:text-white  text-center text-gray-900 sx:w-[100%] ph:p-[10px] l:p-[10px] xl:p-[10px]">
         <h1 className="text-[45px] font-[600] sx:text-[30px]">Депозиты</h1>
       </div>
 
       <div className="bg-slate-100">
-        <div className="pl-[100px] pr-[100px] m-auto  flex gap-10 flex-wrap dark:bg-gray-800 pt-[5%] pb-[5%] sx:flex-wrap ">
-          <div class="div-deposit w-[30%] bg-[white]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
+        <div className="pl-[100px] pr-[100px] m-auto  flex gap-10 flex-wrap dark:bg-gray-800 pt-[5%] pb-[5%] sx:flex-wrap sx:p-[10px] l:p-[10px] l:flex-wrap xl:p-[50px] xxl:p-[50px] cs:p-[40px] cs:flex-wrap cx:p-[40px]">
+          <div class="div-deposit w-[30%] bg-[white]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] l:w-[90%] l:m-[auto] xl:w-[90%] xl:m-[auto] xxl:w-[47%] cs:w-[47%] dark:bg-gray-900 dark:text-white">
             <img className="rounded-[5px_05px_0px_0px]" src={deposit3} alt="" />
             <h1 className="bg-[#0050B2] w-[30%] h-[4vh] pt-[4px] sx:h-[8vh] sx:pt-[6px]  rounded-[5px] ml-[10%] mt-[-3%] relative text-center text-[white] font-[500]">
               Deposit
@@ -100,7 +100,7 @@ const Deposits = () => {
               Подробности <ArrowRightAltIcon />
             </button>
           </div>
-          <div class="div-deposit w-[30%] bg-[white]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
+          <div class="div-deposit w-[30%] bg-[white] l:w-[90%] xxl:w-[47%] l:m-[auto] xl:w-[90%] xl:m-[auto]  my-2 rounded-[5px] sx:w-[90%] cs:w-[47%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
             <img className="rounded-[5px_05px_0px_0px]" src={deposit4} alt="" />
             <h1 className="bg-[#0050B2] w-[30%] h-[4vh] pt-[4px] sx:h-[8vh] sx:pt-[6px]  rounded-[5px] ml-[10%] mt-[-3%] relative text-center text-[white] font-[500]">
               Deposit
@@ -129,7 +129,7 @@ const Deposits = () => {
               Подробности <ArrowRightAltIcon />
             </button>
           </div>
-          <div class=" div-deposit w-[30%] bg-[white]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
+          <div class=" div-deposit w-[30%] bg-[white] l:w-[90%] xxl:w-[47%] cs:w-[47%] l:m-[auto] xl:w-[90%] xl:m-[auto]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
             <img className="rounded-[5px_05px_0px_0px]" src={deposit5} alt="" />
             <h1 className="bg-[#0050B2] w-[30%] h-[4vh] sx:h-[8vh] sx:pt-[6px] pt-[4px] rounded-[5px] ml-[10%] mt-[-3%] relative text-center text-[white] font-[500]">
               Deposit
@@ -158,7 +158,7 @@ const Deposits = () => {
               Подробности <ArrowRightAltIcon />
             </button>
           </div>
-          <div class="div-deposit w-[30%] bg-[white]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
+          <div class="div-deposit w-[30%] bg-[white] l:w-[90%] xxl:w-[47%] cs:w-[47%] l:m-[auto] xl:w-[90%] xl:m-[auto]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
             <img className="rounded-[5px_05px_0px_0px]" src={deposit6} alt="" />
             <h1 className="bg-[#0050B2] w-[30%] h-[4vh] pt-[4px] sx:h-[8vh] sx:pt-[6px]  rounded-[5px] ml-[10%] mt-[-3%] relative text-center text-[white] font-[500]">
               Deposit
@@ -187,7 +187,7 @@ const Deposits = () => {
               Подробности <ArrowRightAltIcon />
             </button>
           </div>
-          <div class="div-deposit w-[30%] bg-[white]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
+          <div class="div-deposit w-[30%] bg-[white] l:w-[90%] xxl:w-[47%] cs:w-[47%] cs:m-[auto] xxl:m-[auto] l:m-[auto] xl:w-[90%] xl:m-[auto]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
             <img className="rounded-[5px_05px_0px_0px]" src={deposit7} alt="" />
             <h1 className="bg-[#0050B2] w-[30%] h-[4vh] sx:h-[8vh] sx:pt-[6px] pt-[4px] rounded-[5px] ml-[10%] mt-[-3%] relative text-center text-[white] font-[500]">
               Deposit
@@ -220,7 +220,6 @@ const Deposits = () => {
         </div>
       </div>
     </>
-
-  )
+  );
 }
 export default Deposits;
