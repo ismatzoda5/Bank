@@ -22,6 +22,14 @@ import { color } from "framer-motion";
 import { Button, ConfigProvider, Popover } from "antd";
 import { useState } from "react";
 
+// Imports Select MUI
+
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 const content = (
   <div className="w-[200px]">
     <Link to={"credits"}>
@@ -125,14 +133,29 @@ const content5 = (
     </h1>
   </div>
 );
+
+// Imports Translate
+import { useTranslation } from "react-i18next";
+ 
+
 const Layout = () => {
   const [modal, setModal] = useState(false);
 
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };  
+
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
 
 
   return (
     <div>
-      <div className="pl-[80px] sticky top-0  dark:bg-gray-900 bg:text-[white] font-[500] text-[18px]  bg-[white] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center z-10 sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
+      <div className="pl-[80px] sticky top-0  dark:bg-gray-900 bg:text-[white] font-[500] text-[18px] shadow-xl  bg-[white] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center z-10 sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
         <div className="w-[16%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
           <Link to={"/"}>
             <img className="w-[100%] h-[100%]" src={logo} alt="" />
@@ -141,33 +164,33 @@ const Layout = () => {
         <div className="flex items-center gap-[30px] sx:hidden l:hidden xl:hidden xxl:hidden cs:hidden cx:hidden">
           <Popover className="border-none" placement="bottom" content={content}>
             <h1 className="chastnie-lica  text-[#EBA707] hover:text-[gray] cursor-pointer p-[5px]">
-              Частным лицам
+            {t("navbar.h1")}
             </h1>
           </Popover>
           <Popover placement="bottom" content={content2}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Бизнесу
+            {t("navbar.h2")}
             </h1>
           </Popover>
           <Popover content={content3} placement="bottom">
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              О компании
+            {t("navbar.h3")}
             </h1>
           </Popover>
           <Popover content={content4} placement="bottom">
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Новости
+            {t("navbar.h4")}
             </h1>
           </Popover>
           <Popover content={content5} placement="bottom">
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Контакты
+            {t("navbar.h5")}
             </h1>
           </Popover>
         </div>
         <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px] sx:p-[0px]  bg-[white] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center ">
           <div className="flex items-center gap-[30px] justify-between">
-            <select
+            {/* <select
               className="w-[80px] bg-[white] rounded-md dark:bg-gray-900 p-[5px] h-[40px] outline-none cursor-pointer"
               name=""
               id=""
@@ -175,13 +198,31 @@ const Layout = () => {
               <option value="">
                 <h1>TJK</h1>
               </option>
-              <option value="">
-                <h1>RUS</h1>
+              <option onClick={()=> changeLanguage("ru")} value="">
+                <h1 >RUS</h1>
               </option>
               <option value="">
                 <h1>ENG</h1>
               </option>
-            </select>
+            </select> */}
+             <Box  sx={{ minWidth: 120 ,color:"gray" }}>
+      <FormControl fullWidth>
+        <InputLabel sx={{color:"gray"}} id="demo-simple-select-label">Language</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Language"
+          onChange={handleChange}
+        >
+          <MenuItem onClick={()=> changeLanguage("eng")} value="Eng">Eng</MenuItem>
+          <MenuItem onClick={()=> changeLanguage("ru")} value="Rus">Rus</MenuItem>
+          <MenuItem onClick={()=> changeLanguage("tj")} value="Tjk">Tjk</MenuItem>
+          
+        </Select>
+      </FormControl>
+    </Box>
+
             <Switcher />
             <div className="hidden sx:block border-[#EBA707] rounded-md  border-[1px]">
               <IconButton onClick={() => setModal(true)}>
@@ -194,83 +235,79 @@ const Layout = () => {
         </div>
       </div>
       <Outlet />
-      <div className="p-[30px] flex justify-between items-center bg-[white] dark:bg-gray-900 text-[#EBA707] text-[16px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
+      <div className="p-[30px] flex justify-between items-center shadow-2xl  bg-[white] dark:bg-gray-900 text-[#EBA707] text-[16px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
         <div className="w-[35%] h-[100%] sx:w-[100%] l:w-[100%] xl:w-[100%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <img className="w-[50%] h-[100%]" src={logo} alt="" />
           <h1 className="font-[500] mt-[40px]">
-            ЗАО МДО «Сандук» выступает в качестве правопреемника ООО МДО «Рушди
-            Ориён». ООО МДО «Рушди Ориён», которая была зарегистрирована
-            государством на основании протокола участника под №01 от 10 июня
-            2014 года, в соответствии с решением учредителей под № 01 от
-            22.01.2022 год был преобразован в ЗАО МДО «Сандук».
+          {t("footer.h1")}
           </h1>
         </div>
         <div className="w-[20%] sx:w-[48%] l:w-[48%] xl:w-[48%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
-            О компании
+          {t("footer.h2")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer  p-[5px] pt-[20px]">
-            Аудиторские отчёты
+          {t("footer.h3")}
           </h1>
           <Link to={"pravaklienta"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Права клиента
+            {t("footer.h4")}
             </h1>
           </Link>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            Норматив достаточности капитала
+          {t("footer.h5")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            Инвесторам
+          {t("footer.h6")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            Комплаенсы
+          {t("footer.h7")}
           </h1>
           <Link to={"finansovieotchety"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Финансовые отчеты
+            {t("footer.h8")}
             </h1>
           </Link>
           <Link to={"rukovodstva"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Руководство
+            {t("footer.h9")}
             </h1>
           </Link>
           <Link to={"istoriya"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              История
+            {t("footer.h10")}
             </h1>
           </Link>
         </div>
         <div className="w-[20%] sx:w-[48%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:w-[48%] xxl:mt-[20px] cs:mt-[20px] cs:w-[48%] cx:w-[48%]">
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
-            Малому и среднему Бизнесу
+          {t("footer.h11")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer  p-[5px] pt-[20px]">
-            Зарплатные проекты
+          {t("footer.h12")}
           </h1>
           <Link to={"bankovskiekarty"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Банковскые карты
+            {t("footer.h13")}
             </h1>
           </Link>
-          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">Кредиты</h1>
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">{t("footer.h14")}</h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            Паевые инвестиционные фонды
+          {t("footer.h15")}
           </h1>
           <Link to={"deposity"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-              Депозиты
+            {t("footer.h16")}
             </h1>
           </Link>
-          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">РКО</h1>
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">{t("footer.h17")}</h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            Бизнес-проекты
+          {t("footer.h18")}
           </h1>
         </div>
         <div className="w-[15%] sx:w-[100%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:mt-[20px] xxl:w-[48%] cs:w-[48%] cs:mt-[20px] cx:w-[48%]">
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
-            Контакты
+          {t("footer.h19")}
           </h1>
           <div className="footer-div-info flex items-center gap-[20px] p-[10px] mt-[10px]">
             <LocalPhoneIcon sx={{ cursor: "pointer" }} />

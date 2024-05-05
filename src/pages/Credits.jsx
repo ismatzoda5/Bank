@@ -11,7 +11,15 @@ import image2 from "../assets/credits-image2.jpg";
 import image3 from "../assets/credits-image3.jpg";
 import sumho from "../assets/sumho.svg";
 import bitovaya from "../assets/bitovaya.svg";
+// Imports Translate
+import { useTranslation } from "react-i18next";
+
 const Credits = () => {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };  
+
   const [creditAmount, setCreditAmount] = useState(1000);
   const [sliderValue, setSliderValue] = useState(1000);
   const handleSliderChange = (e) => {
@@ -72,7 +80,7 @@ const Credits = () => {
             className="text-[#222222] dark:text-white"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)" }}
           >
-            Кредиты
+           {t("credit.h1")}
           </h1>
         </div>
         <div
@@ -81,11 +89,9 @@ const Credits = () => {
           className="flex justify-between dark:bg-gray-900 p-[30px] rounded-[20px] bg-[#F9E5A6] items-center sx:w-[80%] sx:m-[auto] sx:flex-wrap"
         >
           <div className="w-[48%] sx:w-[100%]">
-            <h1 className="text-[40px] font-[700] ">Кредиты для вас</h1>
+            <h1 className="text-[40px] font-[700] "> {t("credit.h2")}</h1>
             <p className="text-[19px] font-[400] pt-[15px]">
-              МДО "Сандук" предлагает широкий спектр кредитных продуктов.
-              Выберете кредит, который наилучшим образом соответствует вашим
-              потребностям и требованиям
+            {t("credit.h3")}
             </p>
           </div>
           <div className="w-[48%] sx:w-[100%] sx:mt-[20px]">
@@ -103,10 +109,9 @@ const Credits = () => {
             <img src={bitovaya} alt="" />
           </div>
           <div className="w-[58%] sx:w-[100%]">
-            <h1 className="text-[22px] font-[500]">Потребительский кредит</h1>
+            <h1 className="text-[22px] font-[500]"> {t("credit.h4")}</h1>
             <p className="text-[17px] font-[400] pt-[10px]">
-              Это кредит, который предоставляется для удовлетворения социальных
-              нужд, граждан страны
+            {t("credit.h5")}
             </p>
           </div>
         </div>
@@ -120,11 +125,10 @@ const Credits = () => {
           </div>
           <div className="w-[58%] sx:w-[100%] sx:mt-[20px]">
             <h1 className="text-[22px] font-[500]">
-              Бизнес кредит для частных предпринимателей
+            {t("credit.h6")}
             </h1>
             <p className="text-[17px] font-[400] pt-[10px]">
-              Это кредит, который предоставляется для удовлетворения социальных
-              нужд, граждан страны
+            {t("credit.h7")}
             </p>
           </div>
         </div>
@@ -133,10 +137,9 @@ const Credits = () => {
             <img className="rounded-[20px]" src={image2} alt="" />
           </div>
           <div className="w-[48%] sx:w-[100%] ">
-            <h1 className="text-[35px] font-[600]">Кредит «Рушди Деҳот»</h1>
+            <h1 className="text-[35px] font-[600]"> {t("credit.h8")}</h1>
             <p className="text-[19px] w-[80%] font-[400] pt-[20px]">
-              Это предпринимательские кредиты (Внутренние туристические
-              сервисные компании)
+            {t("credit.h9")}
             </p>
           </div>
         </div>
@@ -146,11 +149,10 @@ const Credits = () => {
           </div>
           <div className="w-[48%] sx:w-[100%]">
             <h1 className="text-[35px] font-[600] sx:mt-[10px]">
-              Кредит «Сабз»
+            {t("credit.h10")}
             </h1>
             <p className="text-[19px] w-[80%] font-[400] pt-[20px]">
-              Это предпринимательские кредиты (Внутренние туристические
-              сервисные компании)
+            {t("credit.h11")}
             </p>
           </div>
         </div>
@@ -158,14 +160,14 @@ const Credits = () => {
 
       <div className="p-[88px_100px] dark:bg-gray-900 bg-[#F9E5A6] flex flex-col gap-[60px] sx:p-[10px] sx:m-[20px]">
         <h1 className="text-[40px] font-[600] sx:text-[25px]">
-          Калькулятор потребительского кредита
+        {t("credit.h12")}
         </h1>
         <div className="bg-white dark:bg-gray-800 sx:overflow-scroll  rounded-[28px] p-[30px] flex items-start gap-[10px]">
           <div className="flex flex-col gap-[10px]">
             <div>
               <div className="p-[33px_27px_0px] w-[92.5%] border-[#FFB700] border-t border-r border-l rounded-[8px]">
                 <div className="flex flex-col gap-[5px]">
-                  <label htmlFor="">Какая сумма вас интересует</label>
+                  <label htmlFor=""> {t("credit.h13")}</label>
                   <div className="">
                     <input
                       className="outline-none text-[#FFB700] dark:bg-gray-800 text-[25px] w-[13.6%]"
@@ -213,7 +215,7 @@ const Credits = () => {
             <div>
               <div className="p-[33px_27px_0px] w-[92.5%] border-[#FFB700] border-t border-r border-l rounded-[8px]">
                 <div className="flex flex-col gap-[5px]">
-                  <label htmlFor="">На какой срок хотите взять кредит</label>
+                  <label htmlFor=""> {t("credit.h14")}</label>
                   <div className="">
                     <input
                       className="outline-none text-[#FFB700]  dark:bg-gray-800 text-[25px] w-[5%]"
@@ -261,7 +263,7 @@ const Credits = () => {
             <div>
               <div className="p-[33px_27px_0px] w-[92.5%] border-[#FFB700] border-t border-r border-l rounded-[8px]">
                 <div className="flex flex-col gap-[5px]">
-                  <label htmlFor="">Процентная ставка</label>
+                  <label htmlFor=""> {t("credit.h15")}</label>
                   <div className="">
                     <input
                       className="outline-none text-[#FFB700]  dark:bg-gray-800 text-[25px] w-[5%]"
@@ -310,7 +312,7 @@ const Credits = () => {
           <div className="">
             <div className="w-[500px] p-[50px] rounded-[15px] shadow-[0_0_5px_#FFB700] flex items-end gap-[120px]">
               <div>
-                <h1>Ежемесячный платеж</h1>
+                <h1> {t("credit.h16")}</h1>
                 <h1 className="text-[#FFB700] text-[28px]">{monthlyPayment}</h1>
               </div>
 
@@ -318,7 +320,7 @@ const Credits = () => {
                 className="bg-[#FFB700] p-[10px_20px] rounded-[5px] text-[#FFF] outline-none"
                 onClick={calculateMonthlyPayment}
               >
-                Contained
+                 {t("credit.h17")}
               </button>
             </div>
           </div>

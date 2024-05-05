@@ -22,8 +22,15 @@ import "../App.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// Imports Translate
+import { useTranslation } from "react-i18next";
+
 
 const Denezhnie_perevodi = () => {
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };  
   const data = [
     {
       id: 1,
@@ -96,7 +103,7 @@ const Denezhnie_perevodi = () => {
       </div>
       <div className="pl-[100px] pr-[100px] pt-[30px] pb-[30px] sx:p-[10px]">
         <h1 className="text-[30px] font-[600] text-[#EBA707] sx:text-[20px]">
-          Наши Международные системы переводов
+        {t("perevodi.h1")}
         </h1>
         <div className="flex justify-between items-center gap-[20px] mt-[30px] sx:flex-wrap">
           {data.map((elem) => {
@@ -124,7 +131,7 @@ const Denezhnie_perevodi = () => {
                       aria-controls="panel1-content"
                       id="panel1-header"
                     >
-                      <h1 className="text-[20px]">Узнать больше!</h1>
+                      <h1 className="text-[20px]"> {t("perevodi.h5")}</h1>
                     </AccordionSummary>
                     <AccordionDetails>
                       <h1 className="text-[18px] text-[gray]">
