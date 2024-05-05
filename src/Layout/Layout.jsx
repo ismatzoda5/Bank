@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import Switcher from "../components/Swicher";
 import "../App.css";
+import React from "react";
 
 // imports of Assets Image
 import logo from "../assets/logo.png";
@@ -15,15 +16,19 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@mui/material";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { color } from "framer-motion";
 // imports of popover in ant design
 import { Button, ConfigProvider, Popover } from "antd";
 import { useState } from "react";
+
 const content = (
   <div className="w-[200px]">
-    <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
-      Кредиты
-    </h1>
+    <Link to={"credits"}>
+      <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
+        Кредиты
+      </h1>
+    </Link>
     <Link to={"deposity"}>
       <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
         Депозиты
@@ -122,9 +127,12 @@ const content5 = (
 );
 const Layout = () => {
   const [modal, setModal] = useState(false);
+
+
+
   return (
     <div>
-      <div className="pl-[80px] sticky top-0  dark:bg-gray-900 bg:text-[white] font-[500] text-[18px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center z-10 sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
+      <div className="pl-[80px] sticky top-0  dark:bg-gray-900 bg:text-[white] font-[500] text-[18px]  bg-[white] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center z-10 sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
         <div className="w-[16%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
           <Link to={"/"}>
             <img className="w-[100%] h-[100%]" src={logo} alt="" />
@@ -132,65 +140,64 @@ const Layout = () => {
         </div>
         <div className="flex items-center gap-[30px] sx:hidden l:hidden xl:hidden xxl:hidden cs:hidden cx:hidden">
           <Popover className="border-none" placement="bottom" content={content}>
-            <h1 className="chastnie-lica  text-[#EBA707] hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="chastnie-lica  text-[#EBA707] hover:text-[gray] cursor-pointer p-[5px]">
               Частным лицам
             </h1>
           </Popover>
           <Popover placement="bottom" content={content2}>
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Бизнесу
             </h1>
           </Popover>
           <Popover content={content3} placement="bottom">
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               О компании
             </h1>
           </Popover>
           <Popover content={content4} placement="bottom">
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Новости
             </h1>
           </Popover>
           <Popover content={content5} placement="bottom">
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Контакты
             </h1>
           </Popover>
-
-          <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px]  bg-[#0C0C0C] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center ">
-            <div className="flex items-center gap-[30px] justify-between">
-              <select
-                className="w-[80px] bg-[#0C0C0C] rounded-md dark:bg-gray-900 p-[5px] h-[40px] outline-none cursor-pointer"
-                name=""
-                id=""
-              >
-                <option value="">
-                  <h1>TJK</h1>
-                </option>
-                <option value="">
-                  <h1>RUS</h1>
-                </option>
-                <option value="">
-                  <h1>ENG</h1>
-                </option>
-              </select>
-              <Switcher />
-              <div className="hidden sx:block ">
-                <IconButton>
-                  <MenuIcon
-                    sx={{ width: "30px", height: "30px", color: "#EBA707" }}
-                  />
-                </IconButton>
-              </div>
+        </div>
+        <div className="pl-[80px] dark:bg-gray-900 bg:text-[white] text-[19px] sx:p-[0px]  bg-[white] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center ">
+          <div className="flex items-center gap-[30px] justify-between">
+            <select
+              className="w-[80px] bg-[white] rounded-md dark:bg-gray-900 p-[5px] h-[40px] outline-none cursor-pointer"
+              name=""
+              id=""
+            >
+              <option value="">
+                <h1>TJK</h1>
+              </option>
+              <option value="">
+                <h1>RUS</h1>
+              </option>
+              <option value="">
+                <h1>ENG</h1>
+              </option>
+            </select>
+            <Switcher />
+            <div className="hidden sx:block border-[#EBA707] rounded-md  border-[1px]">
+              <IconButton onClick={() => setModal(true)}>
+                <MenuIcon
+                  sx={{ width: "25px", height: "25px", color: "#EBA707" }}
+                />
+              </IconButton>
             </div>
           </div>
         </div>
       </div>
       <Outlet />
-      <div className="p-[30px] flex justify-between items-center bg-[#0C0C0C] dark:bg-gray-900 text-[#EBA707] text-[16px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
+      <div className="p-[30px] flex justify-between items-center bg-[white] dark:bg-gray-900 text-[#EBA707] text-[16px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
         <div className="w-[35%] h-[100%] sx:w-[100%] l:w-[100%] xl:w-[100%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <img className="w-[50%] h-[100%]" src={logo} alt="" />
-          <h1 className="font-[500] mt-[40px] hover:text-[white]">
+          <h1 className="font-[500] mt-[40px]">
             ЗАО МДО «Сандук» выступает в качестве правопреемника ООО МДО «Рушди
             Ориён». ООО МДО «Рушди Ориён», которая была зарегистрирована
             государством на основании протокола участника под №01 от 10 июня
@@ -202,35 +209,35 @@ const Layout = () => {
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
             О компании
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer  p-[5px] pt-[20px]">
+          <h1 className="hover:text-[gray] cursor-pointer  p-[5px] pt-[20px]">
             Аудиторские отчёты
           </h1>
           <Link to={"pravaklienta"}>
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Права клиента
             </h1>
           </Link>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
             Норматив достаточности капитала
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
             Инвесторам
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
             Комплаенсы
           </h1>
           <Link to={"finansovieotchety"}>
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Финансовые отчеты
             </h1>
           </Link>
           <Link to={"rukovodstva"}>
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Руководство
             </h1>
           </Link>
           <Link to={"istoriya"}>
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               История
             </h1>
           </Link>
@@ -239,25 +246,25 @@ const Layout = () => {
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
             Малому и среднему Бизнесу
           </h1>
-          <h1 className="hover:text-[white] cursor-pointer  p-[5px] pt-[20px]">
+          <h1 className="hover:text-[gray] cursor-pointer  p-[5px] pt-[20px]">
             Зарплатные проекты
           </h1>
           <Link to={"bankovskiekarty"}>
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Банковскые карты
             </h1>
           </Link>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">Кредиты</h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">Кредиты</h1>
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
             Паевые инвестиционные фонды
           </h1>
           <Link to={"deposity"}>
-            <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+            <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
               Депозиты
             </h1>
           </Link>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">РКО</h1>
-          <h1 className="hover:text-[white] cursor-pointer p-[5px]">
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">РКО</h1>
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
             Бизнес-проекты
           </h1>
         </div>
@@ -278,20 +285,20 @@ const Layout = () => {
             <h1 className=" cursor-pointer ">(+992)44 600 15 20</h1>
           </div>
           <div className="flex justify-around  mt-[10px] sx:justify-start sx:gap-[20px]">
-            <div className="socsety border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+            <div className="socsety border-[1.5px] hover:text-[gray]  hover:border-[gray] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
               <EmailIcon
                 sx={{ width: "30px", height: "30px", cursor: "pointer" }}
               />
             </div>
             <a target="blank" href="https://www.instagram.com/sanduktj">
-              <div className="socsety border-[1.5px] hover:text-[white] hover:border-[white] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+              <div className="socsety border-[1.5px] hover:text-[gray]  hover:border-[gray] cursor-pointer p-[5px] rounded-md border-[#EBA707]">
                 <InstagramIcon
                   sx={{ width: "30px", height: "30px", cursor: "pointer" }}
                 />
               </div>
             </a>
             <a target="blank" href="https://www.facebook.com/sanduk.tj">
-              <div className="socsety border-[1.5px] hover:text-[white]  hover:border-[white]  cursor-pointer p-[5px] rounded-md border-[#EBA707]">
+              <div className="socsety border-[1.5px] hover:text-[gray]  hover:border-[gray]  cursor-pointer p-[5px] rounded-md border-[#EBA707]">
                 <FacebookIcon
                   sx={{ width: "30px", height: "30px", cursor: "pointer" }}
                 />
@@ -299,13 +306,159 @@ const Layout = () => {
             </a>
           </div>
         </div>
+        <div></div>
       </div>
       {modal ? (
-        <div className="absolute top-1 text-white w-[100%] h-[300px] bg-[white] p-[30px]">
-          <div>
-            <IconButton onClick={() => setModal(false)}>
-              <CloseIcon sx={{ width: "30px", height: "30px" }} />
-            </IconButton>
+        <div className="modal-div dark:bg-gray-900 absolute top-1 z-30 text-white w-[100%] h-[auto] bg-[white] p-[20px]">
+          <div className="flex justify-between items-center pt-[20px] pb-[20px]">
+            <div className="border w-[10.5%] border-[#EBA707] rounded-md">
+              <IconButton onClick={() => setModal(false)}>
+                <CloseIcon
+                  sx={{ width: "30px", height: "30px", color: "#EBA707" }}
+                />
+              </IconButton>
+            </div>
+            <div className="w-[30%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
+              <Link to={"/"}>
+                <img className="w-[100%] h-[100%]" src={logo} alt="" />
+              </Link>
+            </div>
+          </div>
+          <div className="flex ">
+            <div>
+              <Link to={"credits"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
+                  Кредиты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"deposity"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Депозиты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"strakhoviklady"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Страховые вклады
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"denezhnieperevody"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Денежные переводы
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"bankovskiekarty"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Банковские карты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"projects"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Проекты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                Головной офис
+                <ArrowRightAltIcon />
+              </h1>
+            </div>
+            <div>
+              <Link to={"credits"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
+                  Кредиты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"deposity"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Депозиты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"strakhoviklady"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Страховые вклады
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"denezhnieperevody"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Денежные переводы
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"bankovskiekarty"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Банковские карты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"projects"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Проекты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                ЦБО
+                <ArrowRightAltIcon />
+              </h1>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                Акция
+                <ArrowRightAltIcon />
+              </h1>
+            </div>
+            <div>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                Фудиторские отчеты
+                <ArrowRightAltIcon />
+              </h1>
+              <Link to={"pravaklienta"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Права клиента
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                Норматив достаточности капитала
+                <ArrowRightAltIcon />
+              </h1>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                Инвесторам
+                <ArrowRightAltIcon />
+              </h1>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                Комплаенс
+                <ArrowRightAltIcon />
+              </h1>
+              <Link to={"finansovieotchety"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Финансовые отчеты
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"rukovodstva"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  Руководство
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <Link to={"istoriya"}>
+                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                  История
+                  <ArrowRightAltIcon />
+                </h1>
+              </Link>
+              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
+                Филлиалы
+                <ArrowRightAltIcon />
+              </h1>
+            </div>
           </div>
         </div>
       ) : null}

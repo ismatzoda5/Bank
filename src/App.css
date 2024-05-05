@@ -1,5 +1,5 @@
 .footer-div-info:hover{
-    color: white;
+    color: gray;
     cursor: pointer;    
 }
 .socsety:hover{
@@ -38,11 +38,12 @@
     transition: 0.7s;
     cursor: pointer;
 }
-
-
- 
- 
- 
+.sumho:hover{
+  transform: rotate(70deg);
+  transition: 1s;
+  cursor: pointer;
+  filter: grayscale(1);
+}
   
   .swiper {
     width: 100%;
@@ -58,7 +59,6 @@
     justify-content: center;
     align-items: center;
   }
-  
   .swiper-slide img {
     display: block;
     width: 100%;
@@ -91,4 +91,18 @@
     transform: scale(1.05);
     transition: 0.7s;
     cursor: pointer;
+}
+.div-credits:hover{
+  transform: scale(1.05);
+    transition: 0.7s;
+    cursor: pointer;
+}
+/* .back-div-home{
+  background-image: url(../src/assets/Bank.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+} */
+.modal-div{
+  transition: 2s;
 }
