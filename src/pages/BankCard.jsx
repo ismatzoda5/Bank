@@ -2,7 +2,7 @@ import React from "react";
 
 // Images
 import cards from "../assets/cards.svg";
-
+import CardVideo from "../assets/video-background.webm"
 // Icons
 import SecurityIcon from "@mui/icons-material/Security";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
@@ -22,28 +22,33 @@ const BankCard = () => {
   };  
   return (
     <>
-      <div className="card ">
-        <div className=" flex justify-between items-center p-[100px] sx:p-[10px] sx:flex-wrap  ">
+      <div className="card h-[100vh] sx:h-[100vh] ">
+        <video
+          className="w-[100%] object-cover sx:w-[100%] sx:h-[100%] h-[100%]"
+          loop
+          autoPlay
+          muted
+        >
+          <source src={CardVideo} />
+        </video>
+        <div className=" absolute top-0 w-[100%] h-[100%] items-center flex justify-between  p-[100px] sx:p-[10px] sx:flex-wrap  ">
           <div className="w-[55%] text-gray-800 sx:w-[90%]">
-            <h1 className="text-[50px] font-[600] dark:text-white sx:text-[30px]">
-            {t("kart.h1")}
+            <h1 className="text-[50px] font-[600] text-white sx:text-[30px]">
+              {t("kart.h1")}
             </h1>
-            <p className="text-[20px] dark:text-white font-[500]  mt-[3%] sx:text-[18px]">
-            {t("kart.h2")}
+            <p className="text-[20px] text-white font-[500]  mt-[3%] sx:text-[18px]">
+              {t("kart.h2")}
             </p>
-            <button className="bg-[#fcd450] dark:bg-gray-800 dark:text-[#fcd450] dark:border-[2px] dark:border-[#fcd450] w-[40%] mb-[5%] rounded-[10px] mt-[4%] sx:h-[12vh] h-[8vh] text-[18px] font-[500]">
-            {t("kart.h3")}
+            <button className="bg-[#fcd450] hover:shadow-xl shadow-[#fcd450] text-white  dark:bg-transparent dark:text-[#fcd450] dark:border-[2px] dark:border-[#fcd450] w-[40%] mb-[5%] rounded-[10px] mt-[4%] sx:h-[10vh] h-[8vh] sx:w-[60%]  text-[18px] font-[500]">
+              {t("kart.h3")}
             </button>
-          </div>
-          <div className="w-[40%] sx:w-[90%]">
-            <img className="bankCard-image" src={cards} alt="" />
           </div>
         </div>
       </div>
-      <div className="text-center text-gray-900  pl-[100px] pr-[100px] pt-[30px] pb-[30px] dark:bg-gray-800 dark:text-[white]">
-        <h1 className="text-[45px] font-[600]">{t("kart.h4")}</h1>
-        <p className="text-[16px] w-[70%] m-[auto] mt-[3%] font-[500]">
-        {t("kart.h5")}
+      <div className="text-center text-gray-900  pl-[100px] pr-[100px] pt-[30px] pb-[30px] dark:bg-gray-800 dark:text-[white] sx:p-[10px]">
+        <h1 className="text-[45px] font-[600] sx:text-[30px]">{t("kart.h4")}</h1>
+        <p className="text-[16px] w-[70%] sx:w-[100%] m-[auto] mt-[3%] font-[500]">
+          {t("kart.h5")}
         </p>
       </div>
       {/* <div className=" flex justify-between mt-[10%] pl-[100px] pr-[100px] pt-[30px] pb-[30px] sx:p-[10px] sx:flex-wrap">
@@ -81,35 +86,36 @@ const BankCard = () => {
         </div>
       </div> */}
 
-      <div className="p-[50px] sx:p-[10px] dark:bg-gray-800">
-        <div className="w-[90%] bg-slate-100 m-auto dark:bg-gray-900 dark:text-[white] flex justify-between rounded-[20px] p-[40px] items-center sx:p-[10px] sx:flex-wrap">
-          <div className="w-[45%] mt-[3%] sx:w-[90%]">
+      <div className="p-[50px] sx:p-[0px] dark:bg-gray-800">
+        <div className="w-[90%] bg-slate-100 m-auto dark:bg-gray-900 dark:text-[white] flex justify-between rounded-[20px] p-[40px] items-center  sx:flex-wrap sx:p-[10px]">
+          <div className="w-[45%] mt-[3%] sx:w-[100%]">
             <h1 className="text-[40px] font-[600] sx:text-[30px]">
-            {t("kart.h6")}
+              {t("kart.h6")}
             </h1>
             <p className="text-[16px] leading-6 mt-[4%] font-[400]">
-            {t("kart.h7")}
+              {t("kart.h7")}
             </p>
-            <button className="bg-[#fcd450] w-[40%] dark:bg-gray-800 dark:text-[#fcd450] dark:border-[#fcd450] dark:border-[1.5px] mb-[5%] rounded-[10px] mt-[7%] sx:h-[12vh] sx:w-[45%] h-[8vh] text-[18px] font-[700]">
-            {t("kart.h8")}<ArrowRightAltIcon />
+            <button className="bg-[#fcd450] hover:shadow-lg shadow-[#fcd450] w-[40%] sx:w-[60%] dark:bg-gray-800 dark:text-[#fcd450] dark:border-[#fcd450] dark:border-[1.5px] mb-[5%] rounded-[10px] mt-[7%] sx:h-[10vh]  h-[8vh] text-[18px] font-[700]">
+              {t("kart.h8")}
+              <ArrowRightAltIcon />
             </button>
           </div>
           <div className="w-[50%] h-[45vh] mt-[5%] mb-[5%] sx:w-[100%]">
-            <img className="bankCard-image" src={cards} alt="" />
+            <img className="" src={cards} alt="" />
           </div>
         </div>
       </div>
 
       <div className=" flex justify-between items-center  p-[100px] sx:p-[10px] dark:bg-gray-800 dark:text-[white] sx:flex-wrap  sx:mt-[50px] sx:flex-row-reverse">
         <div className="w-[38%] sx:w-[90%] sx:m-[auto] sx:flex-column-reverse">
-          <img className="bankCard-image" src={cards} alt="" />
+          <img className="" src={cards} alt="" />
         </div>
         <div className="w-[48%] sx:w-[90%] sx:m-[auto] sx:mt-[10px]">
           <p className="text-[18px] font-[500]  sx:text-[16px]">
-          {t("kart.h9")}
+            {t("kart.h9")}
           </p>
           <p className="text-[18px] font-[500]   mt-[5%] sx:text-[16px]">
-          {t("kart.h10")}
+            {t("kart.h10")}
           </p>
         </div>
       </div>

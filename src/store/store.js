@@ -4,6 +4,6 @@ import  counterSlice  from '../reducers/todolist/todolist'
 
 export const store = configureStore({
   reducer: {
-    counter:counterSlice
+    sanduk:counterSlice
   },
 })

@@ -24,14 +24,15 @@ import { useState } from "react";
 
 // Imports Select MUI
 
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
+// import select from ant
 const content = (
-  <div className="w-[200px]">
+  <div className="w-[200px]  ">
     <Link to={"credits"}>
       <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
         Кредиты
@@ -136,7 +137,6 @@ const content5 = (
 
 // Imports Translate
 import { useTranslation } from "react-i18next";
- 
 
 const Layout = () => {
   const [modal, setModal] = useState(false);
@@ -144,18 +144,16 @@ const Layout = () => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
-  };  
-
-  const [age, setAge] = React.useState('');
+  };
+  const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
 
-
   return (
     <div>
-      <div className="pl-[80px] sticky top-0  dark:bg-gray-900 bg:text-[white] font-[500] text-[18px] shadow-xl  bg-[white] text-[#EBA707]  pr-[80px] pt-[10px] pb-[10px] flex justify-between items-center z-10 sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
+      <div className="pl-[80px] sticky top-0  dark:bg-gray-900 bg:text-[white] font-[500] text-[18px] shadow-md  bg-[white] text-[#EBA707]  pr-[80px] pt-[3px] pb-[3px] flex justify-between items-center z-10 sx:p-[10px] l:p-[10px] xl:p-[10px] xxl:p-[10px] cx:p-[20px] ">
         <div className="w-[16%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
           <Link to={"/"}>
             <img className="w-[100%] h-[100%]" src={logo} alt="" />
@@ -164,27 +162,27 @@ const Layout = () => {
         <div className="flex items-center gap-[30px] sx:hidden l:hidden xl:hidden xxl:hidden cs:hidden cx:hidden">
           <Popover className="border-none" placement="bottom" content={content}>
             <h1 className="chastnie-lica  text-[#EBA707] hover:text-[gray] cursor-pointer p-[5px]">
-            {t("navbar.h1")}
+              {t("navbar.h1")}
             </h1>
           </Popover>
           <Popover placement="bottom" content={content2}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("navbar.h2")}
+              {t("navbar.h2")}
             </h1>
           </Popover>
           <Popover content={content3} placement="bottom">
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("navbar.h3")}
+              {t("navbar.h3")}
             </h1>
           </Popover>
           <Popover content={content4} placement="bottom">
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("navbar.h4")}
+              {t("navbar.h4")}
             </h1>
           </Popover>
           <Popover content={content5} placement="bottom">
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("navbar.h5")}
+              {t("navbar.h5")}
             </h1>
           </Popover>
         </div>
@@ -205,23 +203,55 @@ const Layout = () => {
                 <h1>ENG</h1>
               </option>
             </select> */}
-             <Box  sx={{ minWidth: 120 ,color:"gray" }}>
-      <FormControl fullWidth>
-        <InputLabel sx={{color:"gray"}} id="demo-simple-select-label">Language</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={age}
-          label="Language"
-          onChange={handleChange}
-        >
-          <MenuItem onClick={()=> changeLanguage("eng")} value="Eng">Eng</MenuItem>
-          <MenuItem onClick={()=> changeLanguage("ru")} value="Rus">Rus</MenuItem>
-          <MenuItem onClick={()=> changeLanguage("tj")} value="Tjk">Tjk</MenuItem>
-          
-        </Select>
-      </FormControl>
-    </Box>
+            <Box
+              className="sx:hidden "
+              sx={{
+                minWidth: 115,
+                color: "#EBA707",
+                border: "none",
+                outline: "none",
+              }}
+            >
+              <FormControl fullWidth sx={{ border: "none" }}>
+                <InputLabel
+                  sx={{ color: "#EBA707", border: "none", outline: "none" }}
+                  id="demo-simple-select-label"
+                >
+                  Language
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={age}
+                  label="Language"
+                  onChange={handleChange}
+                  sx={{ border: "none", outline: "none" }}
+                  className="dark:bg-gray-900"
+                >
+                  <MenuItem
+                    sx={{ color: "#EBA707" }}
+                    onClick={() => changeLanguage("eng")}
+                    value="Eng"
+                  >
+                    Eng
+                  </MenuItem>
+                  <MenuItem
+                    sx={{ color: "#EBA707" }}
+                    onClick={() => changeLanguage("ru")}
+                    value="Rus"
+                  >
+                    Rus
+                  </MenuItem>
+                  <MenuItem
+                    sx={{ color: "#EBA707" }}
+                    onClick={() => changeLanguage("tj")}
+                    value="Tjk"
+                  >
+                    Tjk
+                  </MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
 
             <Switcher />
             <div className="hidden sx:block border-[#EBA707] rounded-md  border-[1px]">
@@ -238,76 +268,78 @@ const Layout = () => {
       <div className="p-[30px] flex justify-between items-center shadow-2xl  bg-[white] dark:bg-gray-900 text-[#EBA707] text-[16px] font-[500] sx:p-[10px] sx:flex-wrap l:p-[10px] l:flex-wrap xl:p-[10px] xl:flex-wrap xxl:p-[20px] xxl:flex-wrap cs:flex-wrap cs:p-[20px] cx:p-[20px] cx:flex-wrap">
         <div className="w-[35%] h-[100%] sx:w-[100%] l:w-[100%] xl:w-[100%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <img className="w-[50%] h-[100%]" src={logo} alt="" />
-          <h1 className="font-[500] mt-[40px]">
-          {t("footer.h1")}
-          </h1>
+          <h1 className="font-[500] mt-[40px]">{t("footer.h1")}</h1>
         </div>
         <div className="w-[20%] sx:w-[48%] l:w-[48%] xl:w-[48%] xxl:w-[48%] cs:w-[48%] cx:w-[48%]">
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
-          {t("footer.h2")}
+            {t("footer.h2")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer  p-[5px] pt-[20px]">
-          {t("footer.h3")}
+            {t("footer.h3")}
           </h1>
           <Link to={"pravaklienta"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("footer.h4")}
+              {t("footer.h4")}
             </h1>
           </Link>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-          {t("footer.h5")}
+            {t("footer.h5")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-          {t("footer.h6")}
+            {t("footer.h6")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-          {t("footer.h7")}
+            {t("footer.h7")}
           </h1>
           <Link to={"finansovieotchety"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("footer.h8")}
+              {t("footer.h8")}
             </h1>
           </Link>
           <Link to={"rukovodstva"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("footer.h9")}
+              {t("footer.h9")}
             </h1>
           </Link>
           <Link to={"istoriya"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("footer.h10")}
+              {t("footer.h10")}
             </h1>
           </Link>
         </div>
         <div className="w-[20%] sx:w-[48%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:w-[48%] xxl:mt-[20px] cs:mt-[20px] cs:w-[48%] cx:w-[48%]">
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
-          {t("footer.h11")}
+            {t("footer.h11")}
           </h1>
           <h1 className="hover:text-[gray] cursor-pointer  p-[5px] pt-[20px]">
-          {t("footer.h12")}
+            {t("footer.h12")}
           </h1>
           <Link to={"bankovskiekarty"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("footer.h13")}
+              {t("footer.h13")}
             </h1>
           </Link>
-          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">{t("footer.h14")}</h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-          {t("footer.h15")}
+            {t("footer.h14")}
+          </h1>
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
+            {t("footer.h15")}
           </h1>
           <Link to={"deposity"}>
             <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-            {t("footer.h16")}
+              {t("footer.h16")}
             </h1>
           </Link>
-          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">{t("footer.h17")}</h1>
           <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
-          {t("footer.h18")}
+            {t("footer.h17")}
+          </h1>
+          <h1 className="hover:text-[gray] cursor-pointer p-[5px]">
+            {t("footer.h18")}
           </h1>
         </div>
         <div className="w-[15%] sx:w-[100%] sx:mt-[20px] l:w-[48%] l:mt-[20px] xl:mt-[20px] xl:w-[48%] xxl:mt-[20px] xxl:w-[48%] cs:w-[48%] cs:mt-[20px] cx:w-[48%]">
           <h1 className=" cursor-pointer p-[5px] text-[22px] font-[500]">
-          {t("footer.h19")}
+            {t("footer.h19")}
           </h1>
           <div className="footer-div-info flex items-center gap-[20px] p-[10px] mt-[10px]">
             <LocalPhoneIcon sx={{ cursor: "pointer" }} />
@@ -346,156 +378,95 @@ const Layout = () => {
         <div></div>
       </div>
       {modal ? (
-        <div className="modal-div dark:bg-gray-900 absolute top-1 z-30 text-white w-[100%] h-[auto] bg-[white] p-[20px]">
-          <div className="flex justify-between items-center pt-[20px] pb-[20px]">
-            <div className="border w-[10.5%] border-[#EBA707] rounded-md">
+        <div className="modal-div dark:bg-gray-900 fixed    top-1 ml-[50%] z-30 text-white w-[50%] h-[100vh] bg-[white] p-[20px]">
+          <div className="modal-div2 flex justify-between flex-row-reverse items-center pt-[0px] pb-[20px]">
               <IconButton onClick={() => setModal(false)}>
                 <CloseIcon
-                  sx={{ width: "30px", height: "30px", color: "#EBA707" }}
+                  sx={{ width: "35px", height: "35px", color: "#EBA707" }}
                 />
               </IconButton>
-            </div>
-            <div className="w-[30%] h-[100%] sx:w-[40%] l:w-[35%] xl:w-[35%] xxl:w-[35%] cs:w-[35%] cx:w-[30%]">
-              <Link to={"/"}>
-                <img className="w-[100%] h-[100%]" src={logo} alt="" />
-              </Link>
+            <div className="flex items-center gap-[40px]">
+              <Box
+                sx={{
+                  minWidth: 115,
+                  color: "#EBA707",
+                  border: "none",
+                  outline: "none",
+                  color: "white",
+                }}
+              >
+                <FormControl fullWidth sx={{ border: "none" }}>
+                  <InputLabel
+                    sx={{ color: "#EBA707", border: "none", outline: "none" }}
+                    id="demo-simple-select-label"
+                  >
+                    Language
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={age}
+                    label="Language"
+                    onChange={handleChange}
+                    sx={{ border: "none", outline: "none" }}
+                    className="dark:bg-gray-900"
+                  >
+                    <MenuItem
+                      sx={{ color: "#EBA707" }}
+                      onClick={() => changeLanguage("eng")}
+                      value="Eng"
+                    >
+                      Eng
+                    </MenuItem>
+                    <MenuItem
+                      sx={{ color: "#EBA707" }}
+                      onClick={() => changeLanguage("ru")}
+                      value="Rus"
+                    >
+                      Rus
+                    </MenuItem>
+                    <MenuItem
+                      sx={{ color: "#EBA707" }}
+                      onClick={() => changeLanguage("tj")}
+                      value="Tjk"
+                    >
+                      Tjk
+                    </MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
             </div>
           </div>
-          <div className="flex ">
-            <div>
-              <Link to={"credits"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
-                  Кредиты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"deposity"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Депозиты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"strakhoviklady"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Страховые вклады
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"denezhnieperevody"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Денежные переводы
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"bankovskiekarty"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Банковские карты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"projects"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Проекты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                Головной офис
-                <ArrowRightAltIcon />
+          <div className="flex items-center text-[#EBA707] gap-[30px] flex-wrap ">
+            <Popover
+              className="border-none"
+              placement="bottom"
+              content={content}
+            >
+              <h1 className="chastnie-lica  text-[#EBA707] hover:text-[gray] sx:text-center sx:w-[100%] sx:m-[auto] cursor-pointer p-[5px]">
+                {t("navbar.h1")}
               </h1>
-            </div>
-            <div>
-              <Link to={"credits"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.6] cursor-pointer p-[5px]">
-                  Кредиты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"deposity"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Депозиты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"strakhoviklady"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Страховые вклады
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"denezhnieperevody"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Денежные переводы
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"bankovskiekarty"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Банковские карты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"projects"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Проекты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                ЦБО
-                <ArrowRightAltIcon />
+            </Popover>
+            <Popover placement="bottom" content={content2}>
+              <h1 className="hover:text-[gray] cursor-pointer p-[5px] sx:text-center sx:w-[100%] sx:m-[auto]">
+                {t("navbar.h2")}
               </h1>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                Акция
-                <ArrowRightAltIcon />
+            </Popover>
+            <Popover content={content3} placement="bottom">
+              <h1 className="hover:text-[gray] cursor-pointer p-[5px] sx:text-center sx:w-[100%] sx:m-[auto]">
+                {t("navbar.h3")}
               </h1>
-            </div>
-            <div>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                Фудиторские отчеты
-                <ArrowRightAltIcon />
+            </Popover>
+            <Popover content={content4} placement="bottom">
+              <h1 className="hover:text-[gray] cursor-pointer p-[5px] sx:text-center sx:w-[100%] sx:m-[auto]">
+                {t("navbar.h4")}
               </h1>
-              <Link to={"pravaklienta"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Права клиента
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                Норматив достаточности капитала
-                <ArrowRightAltIcon />
+            </Popover>
+            <Popover content={content5} placement="bottom">
+              <h1 className="hover:text-[gray] cursor-pointer p-[5px] sx:text-center sx:w-[100%] sx:m-[auto]">
+                {t("navbar.h5")}
               </h1>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                Инвесторам
-                <ArrowRightAltIcon />
-              </h1>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                Комплаенс
-                <ArrowRightAltIcon />
-              </h1>
-              <Link to={"finansovieotchety"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Финансовые отчеты
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"rukovodstva"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  Руководство
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <Link to={"istoriya"}>
-                <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                  История
-                  <ArrowRightAltIcon />
-                </h1>
-              </Link>
-              <h1 className="chastnie-lica text-[18px] text-[#EBA707] hover:opacity-[0.7] cursor-pointer p-[5px]">
-                Филлиалы
-                <ArrowRightAltIcon />
-              </h1>
-            </div>
+            </Popover>
           </div>
         </div>
       ) : null}

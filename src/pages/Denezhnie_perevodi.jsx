@@ -105,40 +105,25 @@ const Denezhnie_perevodi = () => {
         <h1 className="text-[30px] font-[600] text-[#EBA707] sx:text-[20px]">
         {t("perevodi.h1")}
         </h1>
-        <div className="flex justify-between items-center gap-[20px] mt-[30px] sx:flex-wrap">
+        <div className="flex justify-between items-center flex-wrap gap-[20px] mt-[30px] sx:flex-wrap">
           {data.map((elem) => {
             return (
               <div
-                className="perevody w-[30%] hover:border-[#EBA707] border-[1px] hover:shadow-md p-[20px] rounded-md sx:w-[80%] sx:m-[auto] "
+                className=" w-[100%] cursor-pointer hover:shadow-[#EBA707] dark:bg-gray-800 p-[50px] sx:p-[10px]  flex justify-between items-center hover:shadow-md  rounded-xl sx:w-[90%] sx:m-[auto] sx:flex-wrap "
                 key={elem.id}
               >
-                <img
-                  className="object-cover rounded-md"
-                  src={elem.avatar}
-                  alt=""
-                />
-                {/* <h1 className="text-start pt-[10px] text-[#EBA707] text-[22px]">
-                    {elem.name}
-                  </h1> */}
-                <div className="pt-[20px]">
-                  <Accordion
-                    className="dark:bg-gray-800"
-                    sx={{ boxShadow: "none", border: "none" }}
-                    defaultExpanded
-                  >
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1-content"
-                      id="panel1-header"
-                    >
-                      <h1 className="text-[20px]"> {t("perevodi.h5")}</h1>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <h1 className="text-[18px] text-[gray]">
-                        {elem.description}
-                      </h1>
-                    </AccordionDetails>
-                  </Accordion>
+                <div className="w-[38%] sx:w-[100%]">
+                  <img
+                    className="object-cover rounded-2xl "
+                    src={elem.avatar}
+                    alt=""  
+                  />
+                </div>
+                <div className="w-[58%] sx:w-[100%]">
+                  <h1 className="text-[40px] font-[500]">{elem.name}</h1>
+                  <h1 className="pt-[20px] text-[gray] text-[17px]">
+                    {elem.description}
+                  </h1>
                 </div>
               </div>
             );

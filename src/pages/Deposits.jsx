@@ -29,7 +29,7 @@ const Deposits = () => {
             <p className="text-[18px] font-[500] mt-[3%] sx:text-[16px] dark:text-[white]">
             {t("deposit.h2")}
             </p>
-            <button className="bg-gray-900 hover:line-through  dark:bg-gray-800 dark:text-[#fcd450] dark:border-[2px] dark:border-[#fcd450] text-[white] w-[30%] mb-[5%] rounded-[10px] mt-[4%] h-[8.5vh] sx:h-[10vh] sx:w-[50%] ph:w-[80%] cs:w-[50%] cx:w-[50%] text-[16px] font-[500]">
+            <button className="bg-gray-900 border-[2px] hover:text-gray-900 duration-500 hover:font-[600] hover:border-gray-900 hover:bg-transparent   dark:bg-gray-800 dark:text-[#fcd450] dark:border-[2px] dark:border-[#fcd450] text-[white] w-[30%] mb-[5%] rounded-[10px] mt-[4%] h-[8.5vh] sx:h-[10vh] sx:w-[50%] ph:w-[80%] cs:w-[50%] cx:w-[50%] text-[16px] font-[500]">
             {t("deposit.h3")}
             </button>
           </div>
@@ -74,8 +74,8 @@ const Deposits = () => {
         <h1 className="text-[45px] font-[600] sx:text-[30px]">{t("deposit.h9")}</h1>
       </div>
 
-      <div className="bg-slate-100">
-        <div className="pl-[100px] pr-[100px] m-auto  flex gap-10 flex-wrap dark:bg-gray-800 pt-[5%] pb-[5%] sx:flex-wrap sx:p-[10px] l:p-[10px] l:flex-wrap xl:p-[50px] xxl:p-[50px] cs:p-[40px] cs:flex-wrap cx:p-[40px]">
+      <div className="bg-slate-100">  
+        <div className="pl-[100px] pr-[100px] m-auto flex gap-10 flex-wrap dark:bg-gray-800 pt-[5%] pb-[5%] sx:flex-wrap sx:p-[10px] l:p-[10px] l:flex-wrap xl:p-[50px] xxl:p-[50px] cs:p-[40px] cs:flex-wrap cx:p-[40px]">
           <div class="div-deposit w-[30%] bg-[white]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] l:w-[90%] l:m-[auto] xl:w-[90%] xl:m-[auto] xxl:w-[47%] cs:w-[47%] dark:bg-gray-900 dark:text-white">
             <img className="rounded-[5px_05px_0px_0px]" src={deposit3} alt="" />
             <h1 className="bg-[#0050B2] w-[30%] h-[4vh] pt-[4px] sx:h-[8vh] sx:pt-[6px]  rounded-[5px] ml-[10%] mt-[-3%] relative text-center text-[white] font-[500]">
@@ -163,7 +163,7 @@ const Deposits = () => {
             {t("deposit.h12")} <ArrowRightAltIcon />
             </button>
           </div>
-          <div class="div-deposit w-[30%] bg-[white] l:w-[90%] xxl:w-[47%] cs:w-[47%] l:m-[auto] xl:w-[90%] xl:m-[auto]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white">
+          <div class="div-deposit w-[30%] bg-[white] l:w-[90%] xxl:w-[47%] cs:w-[47%] l:m-[auto] xl:w-[90%] xl:m-[auto]  my-2 rounded-[5px] sx:w-[90%] sx:m-[auto] dark:bg-gray-900 dark:text-white ">
             <img className="rounded-[5px_05px_0px_0px]" src={deposit6} alt="" />
             <h1 className="bg-[#0050B2] w-[30%] h-[4vh] pt-[4px] sx:h-[8vh] sx:pt-[6px]  rounded-[5px] ml-[10%] mt-[-3%] relative text-center text-[white] font-[500]">
               Deposit

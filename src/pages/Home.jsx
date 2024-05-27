@@ -76,23 +76,40 @@ const Home = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src={img1} alt="" />
+            <img
+              style={{ height: "70vh", objectFit: "cover" }}
+              className="sx:h-[100vh] object-cover"
+              src={img1}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={img2} alt="" />
+            <img
+              style={{ height: "70vh", objectFit: "cover" }}
+              className="sx:h-[100vh] object-cover"
+              src={img2}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={img3} alt="" />
+            <img
+              style={{ height: "70vh", objectFit: "cover" }}
+              className="h-[50vh] sx:h-[100vh] object-cover"
+              src={img3}
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={img4} alt="" />
+            <div style={{ height: "70vh" }}>
+              <img className="" src={img4} alt="" />
+            </div>
           </SwiperSlide>
         </Swiper>
       </div>
-      <div  className="back-div-home dark:bg-gray-800 dark:text-[white] pt-[30px]">
+      <div className="back-div-home dark:bg-gray-800 dark:text-[white] pt-[30px]">
         <div className="">
           <h1 className="text-center sx:font-[500] sx:text-[30px] l:text-[30px] l:w-[70%] sx:w-[70%] sx:m-[auto] font-[700] w-[70%]  m-auto text-[35px] pt-[2%] ">
-          {t("home.h1")}
+            {t("home.h1")}
           </h1>
         </div>
         <div className="w-[90%] m-auto mt-[5%] pb-[5%]  flex justify-between sx:flex-wrap l:flex-wrap l:w-[100%]">
@@ -102,11 +119,9 @@ const Home = () => {
               src="https://html-template.spider-themes.net/banca/img/home-4/step-icon-01.svg"
               alt=""
             />
-            <h1 className="text-[25px] font-[700] mt-[5%]">
-            {t("home.h2")}
-            </h1>
+            <h1 className="text-[25px] font-[700] mt-[5%]">{t("home.h2")}</h1>
             <p className="mt-[5%] mb-[2%]  text-[#4c5267] text-[16px] dark:text-[white] font-[500] leading-6">
-            {t("home.h3")}
+              {t("home.h3")}
             </p>
           </div>
           <div className="zayavka-div w-[31.5%] sx:w-[80%] sx:m-[auto] sx:mt-[10px] dark:bg-gray-900 dark:border-[1px] cursor-pointer bg-slate-100 p-[25px] text-center rounded-[10px]">
@@ -115,11 +130,9 @@ const Home = () => {
               src="https://html-template.spider-themes.net/banca/img/home-4/step-icon-02.svg"
               alt=""
             />
-            <h1 className="text-[25px] font-[700] mt-[5%]">
-            {t("home.h4")}
-            </h1>
+            <h1 className="text-[25px] font-[700] mt-[5%]">{t("home.h4")}</h1>
             <p className="mt-[5%] mb-[5%] dark:text-[white] text-[#4c5267] text-[16px] font-[500] leading-6">
-            {t("home.h5")}
+              {t("home.h5")}
             </p>
           </div>
           <div className="zayavka-div w-[31.5%] sx:w-[80%] sx:m-[auto] sx:mt-[10px] dark:bg-gray-900 dark:border-[1px] cursor-pointer bg-slate-100 p-[25px] text-center rounded-[10px]">
@@ -128,37 +141,35 @@ const Home = () => {
               src="https://html-template.spider-themes.net/banca/img/home-4/step-icon-03.svg"
               alt=""
             />
-            <h1 className="text-[25px] font-[700] mt-[5%]">
-            {t("home.h6")}
-            </h1>
+            <h1 className="text-[25px] font-[700] mt-[5%]">{t("home.h6")}</h1>
             <p className="mt-[5%] mb-[5%] dark:text-[white] text-[#4c5267] text-[16px] font-[500] leading-6">
-            {t("home.h7")}
+              {t("home.h7")}
             </p>
           </div>
         </div>
       </div>
       <div className="pl-[100px] pr-[100px] pt-[20px] pb-[20px] dark:bg-gray-800 dark:text-[white] sx:p-[10px]">
         <h1 className="text-[40px] text-center font-[600] sx:text-[30px]">
-        {t("home.h8")}
+          {t("home.h8")}
         </h1>
       </div>
-      <div  className="dark:bg-gray-800 pt-[6%] pb-[6%] ">
-        <div data-aos="fade-right" className="w-[90%] m-auto bg-slate-100 rounded-[20px] dark:bg-gray-900 dark:text-[white] ">
+      <div className="dark:bg-gray-800 pt-[6%] pb-[6%] ">
+        <div
+          data-aos="fade-right"
+          className="w-[90%] m-auto bg-slate-100 rounded-[20px] dark:bg-gray-900 dark:text-[white] "
+        >
           <div className="w-[90%] m-auto flex justify-between items-center sx:flex-wrap">
             <div className="w-[45%] mt-[3%] sx:w-[100%] ph:w-[100%]">
               <h1 className="text-[40px] font-[700]">{t("home.h8a")}</h1>
-              <p className="text-[20px] mt-[4%] font-[400]">
-              {t("home.h9")}
-              </p>
+              <p className="text-[20px] mt-[4%] font-[400]">{t("home.h9")}</p>
               <Link to={"denezhnieperevody"}>
                 <button className="bg-[#6D788F] sx:w-[60%] ph:w-[60%] w-[45%] py-[17px] hover:line-through mt-[12%] rounded-[10px] text-[white] text-[20px] font-[700]">
-                {t("home.h10")} <ArrowRightAltIcon />
+                  {t("home.h10")} <ArrowRightAltIcon />
                 </button>
               </Link>
             </div>
             <img
-            
-              className="w-[50%] h-[60vh] sx:h-[70vh] ph:h-[50vh] sx:w-[100%] ph:w-[100%]"
+              className="w-[50%] h-[60vh] sx:h-[70vh] ph:h-[50vh] sx:w-[100%] ph:w-[100%] object-cover"
               src={perevodi}
               alt=""
             />
@@ -167,20 +178,21 @@ const Home = () => {
       </div>
       <div className="pl-[100px] pr-[100px] pt-[20px] pb-[20px] dark:bg-gray-800 dark:text-[white] sx:p-[10px]">
         <h1 className="text-[40px] text-center font-[600] sx:text-[30px]">
-        {t("home.h11")}
+          {t("home.h11")}
         </h1>
       </div>
       <div className="dark:bg-gray-800 pt-[6%] pb-[6%]">
-        <div data-aos="fade-down" className="w-[90%] m-auto bg-slate-100 rounded-[20px] dark:bg-gray-900 dark:text-[white]">
+        <div
+          data-aos="fade-down"
+          className="w-[90%] m-auto bg-slate-100 rounded-[20px] dark:bg-gray-900 dark:text-[white]"
+        >
           <div className="w-[90%] m-auto flex justify-between items-center sx:flex-wrap">
             <div className="w-[45%] mt-[1%] sx:w-[100%] sx:p-[20px]">
               <h1 className="text-[40px] font-[700]">{t("home.h12")}</h1>
-              <p className="text-[20px] mt-[4%] font-[400]">
-              {t("home.h13")} 
-              </p>
+              <p className="text-[20px] mt-[4%] font-[400]">{t("home.h13")}</p>
               <Link to={"bankovskiekarty"}>
                 <button className="bg-[#6D788F] sx:w-[60%] ph:w-[60%] w-[45%] py-[17px] hover:line-through mt-[10%] rounded-[10px] text-[white] text-[20px] font-[700]">
-                {t("home.h14")} <ArrowRightAltIcon />
+                  {t("home.h14")} <ArrowRightAltIcon />
                 </button>
               </Link>
             </div>
@@ -194,25 +206,26 @@ const Home = () => {
       </div>
       <div className="pl-[100px] pr-[100px] pt-[20px] pb-[20px] sx:p-[10px] ph:p-[100%] dark:bg-gray-800 dark:text-[white]">
         <h1 className="text-[40px] text-center font-[600] sx:text-[30px]">
-        {t("home.h15")}
+          {t("home.h15")}
         </h1>
       </div>
       <div className="dark:bg-gray-800 pt-[6%] pb-[6%]">
-        <div data-aos="fade-down-right" className="w-[90%] m-auto   bg-slate-100 rounded-[20px] dark:bg-gray-900 dark:text-white">
+        <div
+          data-aos="fade-down-right"
+          className="w-[90%] m-auto   bg-slate-100 rounded-[20px] dark:bg-gray-900 dark:text-white"
+        >
           <div className="w-[90%] m-auto flex justify-between items-center sx:flex-wrap">
             <div className="w-[45%] mt-[3%] sx:w-[100%] ph:w-[100%]">
               <h1 className="text-[40px] font-[700]">{t("home.h16")}</h1>
-              <p className="text-[20px] mt-[2%] font-[400]">
-              {t("home.h17")}
-              </p>
+              <p className="text-[20px] mt-[2%] font-[400]">{t("home.h17")}</p>
               <Link to={"credits"}>
                 <button className="bg-[#6D788F] w-[45%] sx:w-[60%] py-[17px] hover:line-through mt-[10%] rounded-[10px] text-[white] text-[20px] font-[700] ">
-                {t("home.h18")} <ArrowRightAltIcon />
+                  {t("home.h18")} <ArrowRightAltIcon />
                 </button>
               </Link>
             </div>
             <img
-              className="w-[40%] h-[50vh] mt-[2%] mb-[3%] sx:w-[100%]"
+              className="w-[40%] h-[50vh] mt-[2%] mb-[3%] sx:w-[100%] object-cover"
               src={credit}
               alt=""
             />
@@ -223,53 +236,56 @@ const Home = () => {
       <div className="dark:bg-gray-800 pt-[5%] pb-[5%] dark:text-white">
         <h1 className="text-center font-[700]  text-[35px]">{t("home.h19")}</h1>
         <div className="w-[90%] m-auto flex gap-10 text-center mt-[5%] sx:flex-wrap ph:flex-wrap">
-          <div data-aos="flip-left" class="biznes-div bg-gray-200 p-6  my-2 rounded-[10px] dark:bg-gray-900 dark:text-[white]">
+          <div
+            data-aos="flip-left"
+            class="biznes-div bg-gray-200 p-6  my-2 rounded-[10px] dark:bg-gray-900 dark:text-[white]"
+          >
             <img className="rounded-[10px]" src={kredit1} alt="" />
             <h2 class="text-xl font-bold mb-5 mt-5">{t("home.h20")}</h2>
-            <p class="text-gray-700 dark:text-white">
-            {t("home.h21")}
-            </p>
+            <p class="text-gray-700 dark:text-white">{t("home.h21")}</p>
             <Link>
               <button className="hover:text-[white] mt-[5%] font-[500]">
-              {t("home.h22")}<ArrowRightAltIcon />
+                {t("home.h22")}
+                <ArrowRightAltIcon />
               </button>
             </Link>
           </div>
 
-          <div data-aos="flip-up"  class="biznes-div bg-gray-200 p-6 my-2 rounded-[10px] dark:bg-gray-900 dark:text-[white]">
+          <div
+            data-aos="flip-up"
+            class="biznes-div bg-gray-200 p-6 my-2 rounded-[10px] dark:bg-gray-900 dark:text-[white]"
+          >
             <img className="rounded-[10px]" src={kredit2} alt="" />
             <h2 class="text-xl font-bold mb-5 mt-5">{t("home.h23")}</h2>
-            <p class="text-gray-700 dark:text-white">
-            {t("home.h24")}
-            </p>
+            <p class="text-gray-700 dark:text-white">{t("home.h24")}</p>
             <Link>
               <button className="hover:text-[white] mt-[5%] font-[500]">
-              {t("home.h25")} <ArrowRightAltIcon />
+                {t("home.h25")} <ArrowRightAltIcon />
               </button>
             </Link>
           </div>
 
-          <div data-aos="flip-right"  class="biznes-div bg-gray-200 p-6 my-2 rounded-[10px]  dark:bg-gray-900 dark:text-[white]">
+          <div
+            data-aos="flip-right"
+            class="biznes-div bg-gray-200 p-6 my-2 rounded-[10px]  dark:bg-gray-900 dark:text-[white]"
+          >
             <img className="rounded-[10px]" src={kredit3} alt="" />
             <h2 class="text-xl font-bold mb-5 mt-5">{t("home.h26")}</h2>
-            <p class="text-gray-700 dark:text-[white]">
-            {t("home.h27")}
-            </p>
+            <p class="text-gray-700 dark:text-[white]">{t("home.h27")}</p>
             <Link>
               <button className="hover:text-[white] mt-[5%] font-[500]">
-              {t("home.h28")}<ArrowRightAltIcon />
+                {t("home.h28")}
+                <ArrowRightAltIcon />
               </button>
             </Link>
           </div>
         </div>
       </div>
 
-      <div className="pt-[5%] pb-[5%] bg-gray-900 rounded-[50px] dark:rounded-none dark:bg-gray-800">
+      <div className="pt-[5%] pb-[5%]  rounded-[50px] dark:rounded-none dark:bg-gray-800">
         <div className="w-[90%] m-auto flex justify-between sx:flex-wrap ph:flex-wrap">
           <div className="bg-gray-100 dark:bg-gray-900 dark:text-white w-[55%] rounded-[10px] text-center sx:w-[100%] ph:w-[100%]">
-            <h1 className="text-[25px]  mt-[3%] font-[600]">
-            {t("home.h29")}
-            </h1>
+            <h1 className="text-[25px]  mt-[3%] font-[600]">{t("home.h29")}</h1>
             <div className="w-[85%] rounded-[5px] mt-[3.5%] dark:bg-gray-800 p-[5px] m-auto bg-white flex justify-around items-center ">
               <img
                 className="w-[15%] h-[7vh]"

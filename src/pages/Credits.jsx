@@ -158,7 +158,7 @@ const Credits = () => {
         </div>
       </div>
 
-      <div className="p-[88px_100px] dark:bg-gray-900 bg-[#F9E5A6] flex flex-col gap-[60px] sx:p-[10px] sx:m-[20px]">
+      <div className="p-[88px_100px] dark:bg-gray-900 bg-[#F9E5A6] sx:rounded-3xl flex flex-col gap-[60px] sx:p-[10px] sx:m-[20px]">
         <h1 className="text-[40px] font-[600] sx:text-[25px]">
         {t("credit.h12")}
         </h1>

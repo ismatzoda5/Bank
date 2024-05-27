@@ -6,8 +6,11 @@
     transform: scale(1.1);
     transition: 0.7s;
 }
+.uznat-bolshe{
+  display: none;
+}
 .elem:hover{
-    transform: scale(1.05);
+    transform: scale(1.04 );
     transition: 0.7s;
     cursor: pointer;
 }
@@ -20,13 +23,11 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -44,13 +45,11 @@
   cursor: pointer;
   filter: grayscale(1);
 }
-  
   .swiper {
     width: 100%;
     height: 100%; 
     border-radius: 10px;
   }
-  
   .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -65,15 +64,14 @@
     height: 100%;
     object-fit: cover;
   } 
- 
-  .card{
+  /* .card{
     background-image: url(./assets/bg.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
 .div-deposit:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 0.7s;
     cursor: pointer;
 }
@@ -104,5 +102,24 @@
   filter: grayscale(1);
 } */
 .modal-div{
-  transition: 2s;
+  transition: 1.5s;
+  animation: example 1s linear;
+}
+@keyframes example{
+  from {transform: translateX(+120px);}
+  to {transform: translateY(0);}
+}
+.div-about{
+  background-image: url("../src/assets/fon-image2.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+.rukovodstva-glav-div{
+  background-image: url("../src/assets/fon-image2.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
 }
